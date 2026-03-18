@@ -22,7 +22,7 @@ export async function POST(request: Request) {
     const toEmail = process.env.CONTACT_EMAIL || 'openroadwellnessco@gmail.com'
 
     const result = await resend.emails.send({
-      from: 'Open Road Wellness <hello@openroadwellness.org>',
+      from: 'Open Road Wellness <onboarding@resend.dev>',
       to: toEmail,
       subject: 'New Newsletter Subscriber!',
       html: `
