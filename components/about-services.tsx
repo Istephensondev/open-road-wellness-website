@@ -105,44 +105,68 @@ export function AboutServices() {
           
           {/* About Me Column */}
           <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-xl border border-purple-200/50 h-full">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-xl border border-purple-200/50 h-full overflow-y-auto max-h-[80vh]">
               <p className="text-amber-600 text-sm tracking-[0.3em] uppercase mb-4 font-sans font-medium">
                 About Me
               </p>
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-amber-950 mb-6 leading-tight">
-                Your Guide on the Path to{" "}
-                <span className="text-purple-600">Wellness</span>
+                Hi, I'm <span className="text-purple-600">Ivy</span>
               </h2>
               
               <div className="space-y-4 text-amber-800/80 leading-relaxed mb-8">
                 <p>
-                  Welcome to Open Road Wellness. I believe that healing is not a destination but a 
-                  journey—one that unfolds uniquely for each person who embarks upon it.
+                  I'm a certified hypnosis practitioner, intuitive, and musician, and the owner of Open Road Wellness. I believe that healing is not a destination, but a journey—one that opens new roads, pathways, and beginnings unique to each person who chooses to embark upon it.
                 </p>
                 <p>
-                  With years of experience in hypnotherapy, intuitive guidance, and sound healing, 
-                  I have dedicated my practice to creating a safe, nurturing space where transformation 
-                  can naturally occur.
+                  I've created a safe, nurturing space where transformation can naturally unfold, whether you join me in my mobile wellness van, attend a guided sound bath, or connect virtually. My goal is to make your experience personal, accessible, and deeply restorative.
                 </p>
-              </div>
+                <p className="font-medium text-amber-950">
+                  Here's how my services support real, measurable healing—through hypnosis, intuitive reading, or sound bath:
+                </p>
 
-              {/* Credentials */}
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="text-center p-4 bg-gradient-to-br from-purple-50 to-violet-100 rounded-xl border border-purple-200/50">
-                  <p className="font-serif text-2xl text-purple-600 mb-1">100%</p>
-                  <p className="text-xs text-amber-700/70">Certified Practitioner</p>
+                {/* Hypnosis */}
+                <div className="bg-purple-50/80 rounded-xl p-4 border border-purple-200/50">
+                  <h3 className="font-serif text-lg text-amber-950 mb-2">Hypnosis</h3>
+                  <p className="text-sm mb-2">
+                    As a certified hypnosis practitioner, I guide clients into a deeply relaxed, focused state where the subconscious mind can reframe limiting beliefs, reduce anxiety, and support lasting behavior change. Research shows that hypnosis can:
+                  </p>
+                  <ul className="list-disc list-inside text-sm space-y-1 ml-1 mb-2">
+                    <li>Reduce stress, anxiety, and chronic pain</li>
+                    <li>Improve sleep quality and insomnia</li>
+                    <li>Help break habits, including smoking and overeating</li>
+                    <li>Increase confidence, motivation, and performance</li>
+                  </ul>
                 </div>
-                <div className="text-center p-4 bg-gradient-to-br from-purple-50 to-violet-100 rounded-xl border border-purple-200/50">
-                  <p className="font-serif text-2xl text-purple-600 mb-1">Countless</p>
-                  <p className="text-xs text-amber-700/70">Guided on Their Path</p>
+
+                {/* Intuitive Reading */}
+                <div className="bg-purple-50/80 rounded-xl p-4 border border-purple-200/50">
+                  <h3 className="font-serif text-lg text-amber-950 mb-2">Intuitive Reading</h3>
+                  <p className="text-sm">
+                    Through intuitive guidance, I help clients gain insight into patterns, challenges, and opportunities they may not see on their own. This clarity can lead to better decision-making, increased self-awareness, and emotional alignment, supporting long-term mental and emotional health.
+                  </p>
                 </div>
+
+                {/* Sound Bath */}
+                <div className="bg-purple-50/80 rounded-xl p-4 border border-purple-200/50">
+                  <h3 className="font-serif text-lg text-amber-950 mb-2">Sound Bath</h3>
+                  <p className="text-sm">
+                    Using the power of music and vibration, sound baths entrain brainwaves into calm, restorative states, lower cortisol, and activate the parasympathetic nervous system. Sessions can promote relaxation, release tension, and refresh mental clarity, helping the body and mind reset naturally.
+                  </p>
+                </div>
+
+                <p>
+                  Clients can choose hypnosis, intuitive reading, or sound bath individually, or combine them for a deeper, multi-layered experience. Each session is designed to meet your unique needs, support personal transformation, and open doors to new possibilities and fresh beginnings.
+                </p>
+                <p className="font-medium text-amber-950 italic">
+                  Your journey is uniquely yours—and I'm here to walk with you as you explore new pathways and embrace the possibilities ahead.
+                </p>
               </div>
 
               <Button 
                 asChild
                 className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-6 rounded-full text-base transition-all hover:scale-105 shadow-lg shadow-purple-600/25"
               >
-                <a href="#newsletter">
+                <a href="#contact">
                   Get in Touch
                 </a>
               </Button>
