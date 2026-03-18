@@ -251,9 +251,11 @@ export function Contact() {
           )}
         </div>
 
-        <p className="text-white/70 text-sm mt-8 text-center font-sans drop-shadow">
-          <strong>Prefer to reach out directly?</strong> Email me at <a href="mailto:openroadwellnessco@gmail.com" className="font-bold underline hover:text-white transition-colors">openroadwellnessco@gmail.com</a>
-        </p>
+        <div className="mt-8 text-center">
+          <p className="inline-block bg-white rounded-full px-6 py-3 text-purple-700 text-sm font-sans shadow-lg">
+            <strong>Prefer to reach out directly?</strong> Email me at <a href="mailto:openroadwellnessco@gmail.com" className="font-bold underline hover:text-purple-900 transition-colors">openroadwellnessco@gmail.com</a>
+          </p>
+        </div>
       </div>
     </section>
   )
