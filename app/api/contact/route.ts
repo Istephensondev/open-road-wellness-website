@@ -28,8 +28,8 @@ export async function POST(request: Request) {
     }
 
     await resend.emails.send({
-      from: 'Open Road Wellness <onboarding@resend.dev>',
-      to: process.env.CONTACT_EMAIL || 'wildeasewellness@gmail.com',
+      from: 'Open Road Wellness <hello@openroadwellness.org>',
+      to: process.env.CONTACT_EMAIL || 'openroadwellnessco@gmail.com',
       replyTo: email,
       subject: `New Contact: ${name} - ${serviceLabels[service] || 'General Inquiry'}`,
       html: `
