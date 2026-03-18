@@ -252,7 +252,7 @@ export function Contact() {
         </div>
 
         <p className="text-white/70 text-sm mt-8 text-center font-sans drop-shadow">
-          Prefer to reach out directly? Email me at <a href="mailto:hello@openroadwellness.com" className="underline hover:text-white transition-colors">hello@openroadwellness.com</a>
+          <strong>Prefer to reach out directly?</strong> Email me at <a href="mailto:openroadwellnessco@gmail.com" className="font-bold underline hover:text-white transition-colors">openroadwellnessco@gmail.com</a>
         </p>
       </div>
     </section>
