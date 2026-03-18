@@ -221,20 +221,26 @@ export function Packages() {
   const sectionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
+    // Show immediately on mobile or after a short delay as fallback
+    const timer = setTimeout(() => setIsVisible(true), 500)
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true)
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.05, rootMargin: '100px' }
     )
 
     if (sectionRef.current) {
       observer.observe(sectionRef.current)
     }
 
-    return () => observer.disconnect()
+    return () => {
+      observer.disconnect()
+      clearTimeout(timer)
+    }
   }, [])
 
   return (
