@@ -14,12 +14,23 @@ export function Hero() {
     setIsVisible(true)
   }, [])
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (email) {
-      setStatus("success")
-      setEmail("")
-      setTimeout(() => setStatus("idle"), 3000)
+      try {
+        const response = await fetch('/api/newsletter', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        })
+        if (response.ok) {
+          setStatus("success")
+          setEmail("")
+          setTimeout(() => setStatus("idle"), 3000)
+        }
+      } catch (error) {
+        console.error('Newsletter signup error:', error)
+      }
     }
   }
 
