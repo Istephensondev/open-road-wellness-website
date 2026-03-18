@@ -21,7 +21,7 @@ export async function POST(request: Request) {
 
     // Send notification email to you
     await resend.emails.send({
-      from: 'Open Road Wellness <hello@openroadwellness.org>',
+      from: 'Open Road Wellness <hello@send.openroadwellness.org>',
       to: process.env.CONTACT_EMAIL || 'openroadwellnessco@gmail.com',
       subject: 'New Newsletter Subscriber!',
       html: `
