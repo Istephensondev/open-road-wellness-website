@@ -1,7 +1,7 @@
 import { Resend } from 'resend'
 import { NextResponse } from 'next/server'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null
 
 export async function POST(request: Request) {
   try {
@@ -12,6 +12,11 @@ export async function POST(request: Request) {
         { error: 'Missing required fields' },
         { status: 400 }
       )
+    }
+
+    if (!resend) {
+      console.log('Contact form submission (email not configured):', { name, email, service, message })
+      return NextResponse.json({ success: true })
     }
 
     const serviceLabels: Record<string, string> = {
