@@ -15,8 +15,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Open Road Wellness | Hypnosis, Intuitive Readings & Sound Baths',
-  description: 'Begin your journey to inner peace and holistic healing with Open Road Wellness. Offering hypnosis, intuitive readings, and sound bath experiences.',
+  title: 'Open Road Wellness | Hypnosis, Intuitive Readings & Sound Baths in Nashville, TN',
+  description: 'Open Road Wellness in Nashville, TN offers hypnosis, intuitive readings, and sound bath experiences. Serving clients locally in Nashville and online worldwide. Begin your journey to inner peace and holistic healing.',
+  keywords: 'hypnosis Nashville TN, intuitive readings Nashville, sound bath Nashville, holistic healing Nashville, wellness Nashville Tennessee, online hypnosis, virtual wellness sessions',
   generator: 'v0.app',
   icons: {
     icon: [

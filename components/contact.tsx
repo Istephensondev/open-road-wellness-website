@@ -251,7 +251,11 @@ export function Contact() {
           )}
         </div>
 
-        <div className="mt-8 text-center">
+        <div className="mt-8 text-center space-y-3">
+          <p className="inline-block bg-white rounded-full px-6 py-3 text-purple-700 text-sm font-sans shadow-lg">
+            <strong>Based in Nashville, TN</strong> — Serving clients locally & online worldwide
+          </p>
+          <br />
           <p className="inline-block bg-white rounded-full px-6 py-3 text-purple-700 text-sm font-sans shadow-lg">
             <strong>Prefer to reach out directly?</strong> Email me at <a href="mailto:openroadwellnessco@gmail.com" className="font-bold underline hover:text-purple-900 transition-colors">openroadwellnessco@gmail.com</a>
           </p>
