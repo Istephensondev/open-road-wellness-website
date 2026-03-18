@@ -113,7 +113,7 @@ export function AboutServices() {
                 Hi, I'm <span className="text-purple-600">Ivy</span>
               </h2>
               
-              <div className="space-y-4 text-amber-800/80 leading-relaxed mb-8">
+              <div className="space-y-4 text-amber-800/80 leading-relaxed mb-8 text-base md:text-lg">
                 <p>
                   I'm a certified hypnosis practitioner, intuitive, and musician, and the owner of Open Road Wellness. I believe that healing is not a destination, but a journey—one that opens new roads, pathways, and beginnings unique to each person who chooses to embark upon it.
                 </p>
@@ -125,12 +125,12 @@ export function AboutServices() {
                 </p>
 
                 {/* Hypnosis */}
-                <div className="bg-purple-50/80 rounded-xl p-4 border border-purple-200/50">
-                  <h3 className="font-serif text-lg text-amber-950 mb-2">Hypnosis</h3>
-                  <p className="text-sm mb-2">
+                <div className="bg-purple-50/80 rounded-xl p-5 border border-purple-200/50">
+                  <h3 className="font-serif text-xl text-amber-950 mb-2">Hypnosis</h3>
+                  <p className="text-base mb-2">
                     As a certified hypnosis practitioner, I guide clients into a deeply relaxed, focused state where the subconscious mind can reframe limiting beliefs, reduce anxiety, and support lasting behavior change. Research shows that hypnosis can:
                   </p>
-                  <ul className="list-disc list-inside text-sm space-y-1 ml-1 mb-2">
+                  <ul className="list-disc list-inside text-base space-y-1 ml-1 mb-2">
                     <li>Reduce stress, anxiety, and chronic pain</li>
                     <li>Improve sleep quality and insomnia</li>
                     <li>Help break habits, including smoking and overeating</li>
@@ -139,17 +139,17 @@ export function AboutServices() {
                 </div>
 
                 {/* Intuitive Reading */}
-                <div className="bg-purple-50/80 rounded-xl p-4 border border-purple-200/50">
-                  <h3 className="font-serif text-lg text-amber-950 mb-2">Intuitive Reading</h3>
-                  <p className="text-sm">
+                <div className="bg-purple-50/80 rounded-xl p-5 border border-purple-200/50">
+                  <h3 className="font-serif text-xl text-amber-950 mb-2">Intuitive Reading</h3>
+                  <p className="text-base">
                     Through intuitive guidance, I help clients gain insight into patterns, challenges, and opportunities they may not see on their own. This clarity can lead to better decision-making, increased self-awareness, and emotional alignment, supporting long-term mental and emotional health.
                   </p>
                 </div>
 
                 {/* Sound Bath */}
-                <div className="bg-purple-50/80 rounded-xl p-4 border border-purple-200/50">
-                  <h3 className="font-serif text-lg text-amber-950 mb-2">Sound Bath</h3>
-                  <p className="text-sm">
+                <div className="bg-purple-50/80 rounded-xl p-5 border border-purple-200/50">
+                  <h3 className="font-serif text-xl text-amber-950 mb-2">Sound Bath</h3>
+                  <p className="text-base">
                     Using the power of music and vibration, sound baths entrain brainwaves into calm, restorative states, lower cortisol, and activate the parasympathetic nervous system. Sessions can promote relaxation, release tension, and refresh mental clarity, helping the body and mind reset naturally.
                   </p>
                 </div>
@@ -200,7 +200,7 @@ export function AboutServices() {
                         <CardTitle className="font-serif text-xl text-amber-950 mb-2 group-hover:text-purple-600 transition-colors">
                           {service.title}
                         </CardTitle>
-                        <CardDescription className="text-amber-800/70 leading-relaxed text-sm">
+                        <CardDescription className="text-amber-800/70 leading-relaxed text-base">
                           {service.description}
                         </CardDescription>
                       </div>

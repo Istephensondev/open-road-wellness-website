@@ -66,20 +66,20 @@ export function Hero() {
           {/* Content - Left Side */}
           <div className={`flex-1 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="bg-white/90 backdrop-blur-md border border-amber-200/50 rounded-2xl p-8 md:p-10 shadow-2xl shadow-amber-200/30">
-          <p className="text-amber-600 text-sm tracking-[0.3em] uppercase mb-6 font-sans font-medium whitespace-nowrap">
+          <p className="text-amber-600 text-base md:text-lg tracking-[0.3em] uppercase mb-6 font-sans font-medium whitespace-nowrap">
             Holistic Healing & Transformation
           </p>
-          <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-medium text-amber-950 mb-2 leading-none tracking-tight whitespace-nowrap">
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-amber-950 mb-2 leading-none tracking-tight whitespace-nowrap">
             Open Road <span className="text-amber-600">Wellness</span>
           </h1>
-          <p className="text-amber-700/80 text-sm md:text-base tracking-wide mb-6 font-sans">
+          <p className="text-amber-700/80 text-base md:text-lg tracking-wide mb-6 font-sans">
             Hypnosis · Intuitive Readings · Sound Bath
           </p>
-          <p className="text-amber-900/70 text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed font-sans">
+          <p className="text-amber-900/70 text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed font-sans">
             Guiding you toward balance, clarity, and renewal through the power of mind, energy, and sound.
           </p>
           {/* Newsletter Signup */}
-          <p className="text-amber-800/60 text-sm mb-3 font-sans">Subscribe to our newsletter</p>
+          <p className="text-amber-800/60 text-base mb-3 font-sans">Subscribe to our newsletter</p>
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-6">
             <label htmlFor="hero-email" className="sr-only">Email address</label>
             <Input

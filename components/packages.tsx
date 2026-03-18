@@ -262,33 +262,33 @@ export function Packages() {
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-amber-800 text-sm tracking-[0.3em] uppercase mb-4 font-sans font-medium">
+          <p className="text-amber-800 text-base md:text-lg tracking-[0.3em] uppercase mb-4 font-sans font-medium">
             Investment in Yourself
           </p>
           <h2 className="font-serif text-4xl md:text-6xl text-white mb-6 drop-shadow-lg">
             Packages & Pricing
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-yellow-300 to-purple-500 mx-auto rounded-full mb-6" />
-          <p className="text-white/90 max-w-2xl mx-auto leading-relaxed text-lg drop-shadow">
+          <p className="text-white/90 max-w-2xl mx-auto leading-relaxed text-lg md:text-xl drop-shadow">
             Choose the experience that resonates with where you are on your journey.
           </p>
         </div>
 
         {/* Single Sessions */}
         <div className="mb-12">
-          <h3 className="font-serif text-2xl text-white text-center mb-6 drop-shadow">Single-Session Packages</h3>
+          <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Single-Session Packages</h3>
           <div className="grid md:grid-cols-3 gap-4">
             {singleSessions.map((session, index) => (
               <Card key={session.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-lg transition-all duration-500 hover:shadow-xl hover:-translate-y-1 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
                 <CardHeader className="pb-2">
-                  <CardTitle className="font-serif text-lg text-amber-950">{session.name}</CardTitle>
+                  <CardTitle className="font-serif text-xl text-amber-950">{session.name}</CardTitle>
                   <div className="flex items-baseline gap-2">
                     <span className="text-2xl font-serif text-purple-600">{session.price}</span>
-                    <span className="text-sm text-amber-700">{session.duration}</span>
+                    <span className="text-base text-amber-700">{session.duration}</span>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-amber-800/80">{session.description}</p>
+                  <p className="text-base text-amber-800/80">{session.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -297,65 +297,65 @@ export function Packages() {
 
         {/* Dual Session */}
         <div className="mb-12">
-          <h3 className="font-serif text-2xl text-white text-center mb-6 drop-shadow">Dual-Session Package</h3>
+          <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Dual-Session Package</h3>
           <Card className={`bg-white/95 backdrop-blur-sm border-0 shadow-lg max-w-2xl mx-auto transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <CardHeader className="text-center pb-2">
-              <CardTitle className="font-serif text-xl text-amber-950">{dualSession.name}</CardTitle>
+              <CardTitle className="font-serif text-2xl text-amber-950">{dualSession.name}</CardTitle>
               <div className="flex items-center justify-center gap-2">
                 <span className="text-3xl font-serif text-purple-600">{dualSession.price}</span>
-                <span className="text-sm text-amber-700">{dualSession.duration}</span>
+                <span className="text-base text-amber-700">{dualSession.duration}</span>
               </div>
             </CardHeader>
             <CardContent className="text-center">
-              <p className="text-sm font-medium text-amber-950 mb-2">Choose any 2:</p>
+              <p className="text-base font-medium text-amber-950 mb-2">Choose any 2:</p>
               <div className="flex flex-wrap justify-center gap-2 mb-3">
                 {dualSession.options.map(opt => (
-                  <span key={opt} className="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full">{opt}</span>
+                  <span key={opt} className="text-sm bg-purple-100 text-purple-700 px-3 py-1 rounded-full">{opt}</span>
                 ))}
               </div>
-              <p className="text-sm text-amber-800/80 italic">{dualSession.benefit}</p>
+              <p className="text-base text-amber-800/80 italic">{dualSession.benefit}</p>
             </CardContent>
           </Card>
         </div>
 
         {/* Specialty Programs */}
         <div className="mb-12">
-          <h3 className="font-serif text-2xl text-white text-center mb-6 drop-shadow">Specialty Programs - Focused Transformation</h3>
-          <p className="text-white/80 text-center mb-8 max-w-2xl mx-auto">Each 3-week program includes 3 hypnosis sessions + 1 follow-up, personalized notes, and ongoing support.</p>
+          <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Specialty Programs - Focused Transformation</h3>
+          <p className="text-white/80 text-center mb-8 max-w-2xl mx-auto text-base md:text-lg">Each 3-week program includes 3 hypnosis sessions + 1 follow-up, personalized notes, and ongoing support.</p>
           <div className="grid md:grid-cols-2 gap-6">
             {specialtyPrograms.map((program, index) => (
               <Card key={program.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-xl transition-all duration-500 hover:shadow-2xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
                 <CardHeader className="pb-2">
-                  <CardTitle className="font-serif text-xl text-amber-950">{program.name}</CardTitle>
+                  <CardTitle className="font-serif text-2xl text-amber-950">{program.name}</CardTitle>
                   <div className="flex items-baseline gap-2">
                     <span className="text-3xl font-serif text-purple-600">{program.price}</span>
-                    <span className="text-sm text-amber-700">{program.duration}</span>
+                    <span className="text-base text-amber-700">{program.duration}</span>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div>
-                      <p className="font-medium text-amber-950 text-sm mb-2">Sessions:</p>
+                      <p className="font-medium text-amber-950 text-base mb-2">Sessions:</p>
                       <ul className="space-y-1">
                         {program.sessions.map(s => (
-                          <li key={s} className="text-xs text-amber-800/80 flex items-start gap-1">
+                          <li key={s} className="text-sm text-amber-800/80 flex items-start gap-1">
                             <span className="text-purple-500">•</span>{s}
                           </li>
                         ))}
                       </ul>
                     </div>
                     <div>
-                      <p className="font-medium text-amber-950 text-sm mb-2">Benefits:</p>
+                      <p className="font-medium text-amber-950 text-base mb-2">Benefits:</p>
                       <ul className="space-y-1">
                         {program.benefits.map(b => (
-                          <li key={b} className="text-xs text-amber-800/80 flex items-start gap-1">
+                          <li key={b} className="text-sm text-amber-800/80 flex items-start gap-1">
                             <span className="text-green-500">✓</span>{b}
                           </li>
                         ))}
                       </ul>
                     </div>
                   </div>
-                  <p className="text-xs text-center bg-purple-50 p-2 rounded-lg text-purple-700">
+                  <p className="text-sm text-center bg-purple-50 p-2 rounded-lg text-purple-700">
                     <strong>Add-On:</strong> {program.addOn}
                   </p>
                 </CardContent>
@@ -366,22 +366,22 @@ export function Packages() {
 
         {/* Multi-Session Programs */}
         <div className="mb-12">
-          <h3 className="font-serif text-2xl text-white text-center mb-6 drop-shadow">Multi-Session Programs</h3>
+          <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Multi-Session Programs</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {multiSessionPrograms.map((program, index) => (
               <Card key={program.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-lg transition-all duration-500 hover:shadow-xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
                 <CardHeader className="pb-2">
-                  <CardTitle className="font-serif text-xl text-amber-950">{program.name}</CardTitle>
+                  <CardTitle className="font-serif text-2xl text-amber-950">{program.name}</CardTitle>
                   <div className="flex items-baseline gap-2">
                     <span className="text-3xl font-serif text-purple-600">{program.price}</span>
-                    <span className="text-sm text-amber-700">{program.duration}</span>
+                    <span className="text-base text-amber-700">{program.duration}</span>
                   </div>
-                  <p className="text-sm text-purple-600 font-medium mt-1">{program.includes}</p>
+                  <p className="text-base text-purple-600 font-medium mt-1">{program.includes}</p>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-1">
                     {program.features.map(feature => (
-                      <li key={feature} className="text-sm text-amber-800/80 flex items-start gap-2">
+                      <li key={feature} className="text-base text-amber-800/80 flex items-start gap-2">
                         <span className="text-purple-500 mt-1">✓</span>
                         {feature}
                       </li>
@@ -395,7 +395,7 @@ export function Packages() {
 
         {/* Full Immersion Programs */}
         <div className="mb-12">
-          <h3 className="font-serif text-2xl text-white text-center mb-6 drop-shadow">Full Immersion Programs <span className="text-yellow-300">(Premium)</span></h3>
+          <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Full Immersion Programs <span className="text-yellow-300">(Premium)</span></h3>
           <div className="grid md:grid-cols-2 gap-6">
             {fullImmersionPrograms.map((program, index) => (
               <Card key={program.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-xl relative overflow-hidden transition-all duration-500 hover:shadow-2xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
@@ -403,17 +403,17 @@ export function Packages() {
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-orange-400 to-purple-500" />
                 )}
                 <CardHeader className="pb-2">
-                  <CardTitle className="font-serif text-xl text-amber-950">{program.name}</CardTitle>
+                  <CardTitle className="font-serif text-2xl text-amber-950">{program.name}</CardTitle>
                   <div className="flex items-baseline gap-2">
                     <span className="text-3xl font-serif text-purple-600">{program.price}</span>
-                    <span className="text-sm text-amber-700">{program.duration}</span>
+                    <span className="text-base text-amber-700">{program.duration}</span>
                   </div>
-                  <p className="text-sm text-purple-600 font-medium mt-1">{program.includes}</p>
+                  <p className="text-base text-purple-600 font-medium mt-1">{program.includes}</p>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-1">
                     {program.features.map(feature => (
-                      <li key={feature} className="text-sm text-amber-800/80 flex items-start gap-2">
+                      <li key={feature} className="text-base text-amber-800/80 flex items-start gap-2">
                         <span className="text-purple-500 mt-1">✓</span>
                         {feature}
                       </li>
@@ -427,21 +427,21 @@ export function Packages() {
 
         {/* Mobile Van Packages */}
         <div className="mb-12">
-          <h3 className="font-serif text-2xl text-white text-center mb-6 drop-shadow">Mobile Van Packages</h3>
+          <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Mobile Van Packages</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {mobileVanPackages.map((pkg, index) => (
               <Card key={pkg.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-lg transition-all duration-500 hover:shadow-xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
                 <CardHeader className="pb-2">
-                  <CardTitle className="font-serif text-xl text-amber-950">{pkg.name}</CardTitle>
+                  <CardTitle className="font-serif text-2xl text-amber-950">{pkg.name}</CardTitle>
                   <div className="flex items-baseline gap-2">
                     <span className="text-3xl font-serif text-purple-600">{pkg.price}</span>
-                    <span className="text-sm text-amber-700">{pkg.duration}</span>
+                    <span className="text-base text-amber-700">{pkg.duration}</span>
                   </div>
-                  <p className="text-sm text-purple-600 font-medium mt-1">{pkg.includes}</p>
+                  <p className="text-base text-purple-600 font-medium mt-1">{pkg.includes}</p>
                 </CardHeader>
                 <CardContent>
-                  {pkg.extra && <p className="text-sm text-orange-600 mb-2">{pkg.extra}</p>}
-                  <p className="text-sm text-amber-800/80 italic">{pkg.benefit}</p>
+                  {pkg.extra && <p className="text-base text-orange-600 mb-2">{pkg.extra}</p>}
+                  <p className="text-base text-amber-800/80 italic">{pkg.benefit}</p>
                 </CardContent>
               </Card>
             ))}
@@ -450,12 +450,12 @@ export function Packages() {
 
         {/* Add-Ons */}
         <div className="mb-8">
-          <h3 className="font-serif text-2xl text-white text-center mb-6 drop-shadow">Add-Ons</h3>
+          <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Add-Ons</h3>
           <div className="flex flex-wrap justify-center gap-4">
             {addOns.map(addon => (
               <div key={addon.name} className={`bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg transition-all duration-500 hover:shadow-xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <span className="text-amber-950 font-medium">{addon.name}</span>
-                <span className="text-purple-600 font-serif ml-2">{addon.price}</span>
+                <span className="text-amber-950 font-medium text-base">{addon.name}</span>
+                <span className="text-purple-600 font-serif ml-2 text-base">{addon.price}</span>
               </div>
             ))}
           </div>

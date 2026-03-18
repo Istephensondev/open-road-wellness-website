@@ -98,13 +98,13 @@ export function Contact() {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
             <div className="w-2 h-2 rounded-full bg-yellow-300 animate-pulse" />
-            <span className="text-white/90 text-sm tracking-wide font-sans">Get Started</span>
+            <span className="text-white/90 text-base tracking-wide font-sans">Get Started</span>
           </div>
           
           <h2 id="contact-heading" className="font-serif text-4xl md:text-6xl text-white mb-6 drop-shadow-lg">
             Let&apos;s Connect
           </h2>
-          <p className="text-white/90 leading-relaxed text-lg max-w-xl mx-auto drop-shadow">
+          <p className="text-white/90 leading-relaxed text-lg md:text-xl max-w-xl mx-auto drop-shadow">
             Schedule a consultation to discuss what fits your needs, or book a session right away.
           </p>
           
@@ -149,7 +149,7 @@ export function Contact() {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-amber-900 text-sm font-medium mb-2">
+                <label htmlFor="name" className="block text-amber-900 text-base font-medium mb-2">
                   Your Name
                 </label>
                 <Input
@@ -164,7 +164,7 @@ export function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-amber-900 text-sm font-medium mb-2">
+                <label htmlFor="email" className="block text-amber-900 text-base font-medium mb-2">
                   Email Address
                 </label>
                 <Input
@@ -181,7 +181,7 @@ export function Contact() {
             </div>
 
             <div>
-              <label htmlFor="service" className="block text-amber-900 text-sm font-medium mb-2">
+              <label htmlFor="service" className="block text-amber-900 text-base font-medium mb-2">
                 Service Interest
               </label>
               <select
@@ -201,7 +201,7 @@ export function Contact() {
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-amber-900 text-sm font-medium mb-2">
+              <label htmlFor="message" className="block text-amber-900 text-base font-medium mb-2">
                 Your Message
               </label>
               <Textarea
@@ -252,11 +252,11 @@ export function Contact() {
         </div>
 
         <div className="mt-8 text-center space-y-3">
-          <p className="inline-block bg-white rounded-full px-6 py-3 text-purple-700 text-sm font-sans shadow-lg">
+          <p className="inline-block bg-white rounded-full px-6 py-3 text-purple-700 text-base font-sans shadow-lg">
             <strong>Based in Nashville, TN</strong> — Serving clients locally & online worldwide
           </p>
           <br />
-          <p className="inline-block bg-white rounded-full px-6 py-3 text-purple-700 text-sm font-sans shadow-lg">
+          <p className="inline-block bg-white rounded-full px-6 py-3 text-purple-700 text-base font-sans shadow-lg">
             <strong>Prefer to reach out directly?</strong> Email me at <a href="mailto:openroadwellnessco@gmail.com" className="font-bold underline hover:text-purple-900 transition-colors">openroadwellnessco@gmail.com</a>
           </p>
         </div>
