@@ -192,10 +192,39 @@ export function Contact() {
                 className="w-full bg-amber-50/50 text-amber-950 border border-amber-200 focus-visible:ring-2 focus-visible:ring-purple-400 py-3 px-4 rounded-xl text-base appearance-none cursor-pointer"
               >
                 <option value="">Select a service...</option>
-                <option value="hypnosis">Hypnosis</option>
-                <option value="intuitive-readings">Intuitive Readings</option>
-                <option value="sound-bath">Sound Bath</option>
-                <option value="package">Package Deal</option>
+                
+                <optgroup label="Single Sessions">
+                  <option value="hypnosis">Hypnosis - Mind Reset ($70)</option>
+                  <option value="intuitive-reading">Intuitive Reading - Clarity Session ($30)</option>
+                  <option value="sound-bath">Sound Bath - Vibrational Reset ($50)</option>
+                </optgroup>
+                
+                <optgroup label="Dual-Session Package">
+                  <option value="mini-transformation">Mini Transformation ($85)</option>
+                </optgroup>
+                
+                <optgroup label="Specialty Programs">
+                  <option value="smoke-free">Smoke-Free Transformation ($175)</option>
+                  <option value="weight-loss">Weight Loss & Healthy Habits ($175)</option>
+                  <option value="anxiety-relief">Anxiety & Stress Relief ($175)</option>
+                  <option value="confidence">Confidence & Self-Esteem ($175)</option>
+                </optgroup>
+                
+                <optgroup label="Multi-Session Programs">
+                  <option value="pathway-transformation">Pathway to Transformation ($270)</option>
+                  <option value="clarity-confidence">Clarity & Confidence ($260)</option>
+                </optgroup>
+                
+                <optgroup label="Full Immersion Programs">
+                  <option value="mind-body-soul">Mind-Body-Soul Immersion ($620)</option>
+                  <option value="mind-intuition">Mind & Intuition Immersion ($590)</option>
+                </optgroup>
+                
+                <optgroup label="Mobile Van Packages">
+                  <option value="van-escape">Van Escape ($65)</option>
+                  <option value="on-the-go">On-the-Go Transformation ($270)</option>
+                </optgroup>
+                
                 <option value="other">Other / Not Sure</option>
               </select>
             </div>
