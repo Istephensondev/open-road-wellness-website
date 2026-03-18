@@ -279,7 +279,7 @@ export function Packages() {
           <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Single-Session Packages</h3>
           <div className="grid md:grid-cols-3 gap-4">
             {singleSessions.map((session, index) => (
-              <Card key={session.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-lg transition-all duration-500 hover:shadow-xl hover:-translate-y-1 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
+              <Card key={session.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-lg transition-all duration-500 hover:shadow-xl hover:-translate-y-1 flex flex-col ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
                 <CardHeader className="pb-2">
                   <CardTitle className="font-serif text-xl text-amber-950">{session.name}</CardTitle>
                   <div className="flex items-baseline gap-2">
@@ -287,9 +287,14 @@ export function Packages() {
                     <span className="text-base text-amber-700">{session.duration}</span>
                   </div>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-1">
                   <p className="text-base text-amber-800/80">{session.description}</p>
                 </CardContent>
+                <CardFooter className="pt-0">
+                  <Button asChild className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full">
+                    <a href="#contact">Book</a>
+                  </Button>
+                </CardFooter>
               </Card>
             ))}
           </div>
@@ -313,7 +318,10 @@ export function Packages() {
                   <span key={opt} className="text-sm bg-purple-100 text-purple-700 px-3 py-1 rounded-full">{opt}</span>
                 ))}
               </div>
-              <p className="text-base text-amber-800/80 italic">{dualSession.benefit}</p>
+              <p className="text-base text-amber-800/80 italic mb-4">{dualSession.benefit}</p>
+              <Button asChild className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-8">
+                <a href="#contact">Book</a>
+              </Button>
             </CardContent>
           </Card>
         </div>
@@ -324,7 +332,7 @@ export function Packages() {
           <p className="text-white/80 text-center mb-8 max-w-2xl mx-auto text-base md:text-lg">Each 3-week program includes 3 hypnosis sessions + 1 follow-up, personalized notes, and ongoing support.</p>
           <div className="grid md:grid-cols-2 gap-6">
             {specialtyPrograms.map((program, index) => (
-              <Card key={program.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-xl transition-all duration-500 hover:shadow-2xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
+              <Card key={program.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-xl transition-all duration-500 hover:shadow-2xl flex flex-col ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
                 <CardHeader className="pb-2">
                   <CardTitle className="font-serif text-2xl text-amber-950">{program.name}</CardTitle>
                   <div className="flex items-baseline gap-2">
@@ -332,7 +340,7 @@ export function Packages() {
                     <span className="text-base text-amber-700">{program.duration}</span>
                   </div>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-1">
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div>
                       <p className="font-medium text-amber-950 text-base mb-2">Sessions:</p>
@@ -359,6 +367,11 @@ export function Packages() {
                     <strong>Add-On:</strong> {program.addOn}
                   </p>
                 </CardContent>
+                <CardFooter className="pt-0">
+                  <Button asChild className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full">
+                    <a href="#contact">Book</a>
+                  </Button>
+                </CardFooter>
               </Card>
             ))}
           </div>
@@ -369,7 +382,7 @@ export function Packages() {
           <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Multi-Session Programs</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {multiSessionPrograms.map((program, index) => (
-              <Card key={program.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-lg transition-all duration-500 hover:shadow-xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
+              <Card key={program.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-lg transition-all duration-500 hover:shadow-xl flex flex-col ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
                 <CardHeader className="pb-2">
                   <CardTitle className="font-serif text-2xl text-amber-950">{program.name}</CardTitle>
                   <div className="flex items-baseline gap-2">
@@ -378,7 +391,7 @@ export function Packages() {
                   </div>
                   <p className="text-base text-purple-600 font-medium mt-1">{program.includes}</p>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-1">
                   <ul className="space-y-1">
                     {program.features.map(feature => (
                       <li key={feature} className="text-base text-amber-800/80 flex items-start gap-2">
@@ -388,6 +401,11 @@ export function Packages() {
                     ))}
                   </ul>
                 </CardContent>
+                <CardFooter className="pt-0">
+                  <Button asChild className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full">
+                    <a href="#contact">Book</a>
+                  </Button>
+                </CardFooter>
               </Card>
             ))}
           </div>
@@ -398,7 +416,7 @@ export function Packages() {
           <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Full Immersion Programs <span className="text-yellow-300">(Premium)</span></h3>
           <div className="grid md:grid-cols-2 gap-6">
             {fullImmersionPrograms.map((program, index) => (
-              <Card key={program.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-xl relative overflow-hidden transition-all duration-500 hover:shadow-2xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
+              <Card key={program.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-xl relative overflow-hidden transition-all duration-500 hover:shadow-2xl flex flex-col ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
                 {program.popular && (
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-orange-400 to-purple-500" />
                 )}
@@ -410,7 +428,7 @@ export function Packages() {
                   </div>
                   <p className="text-base text-purple-600 font-medium mt-1">{program.includes}</p>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-1">
                   <ul className="space-y-1">
                     {program.features.map(feature => (
                       <li key={feature} className="text-base text-amber-800/80 flex items-start gap-2">
@@ -420,6 +438,11 @@ export function Packages() {
                     ))}
                   </ul>
                 </CardContent>
+                <CardFooter className="pt-0">
+                  <Button asChild className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full">
+                    <a href="#contact">Book</a>
+                  </Button>
+                </CardFooter>
               </Card>
             ))}
           </div>
@@ -430,7 +453,7 @@ export function Packages() {
           <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Mobile Van Packages</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {mobileVanPackages.map((pkg, index) => (
-              <Card key={pkg.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-lg transition-all duration-500 hover:shadow-xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
+              <Card key={pkg.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-lg transition-all duration-500 hover:shadow-xl flex flex-col ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
                 <CardHeader className="pb-2">
                   <CardTitle className="font-serif text-2xl text-amber-950">{pkg.name}</CardTitle>
                   <div className="flex items-baseline gap-2">
@@ -439,10 +462,15 @@ export function Packages() {
                   </div>
                   <p className="text-base text-purple-600 font-medium mt-1">{pkg.includes}</p>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-1">
                   {pkg.extra && <p className="text-base text-orange-600 mb-2">{pkg.extra}</p>}
                   <p className="text-base text-amber-800/80 italic">{pkg.benefit}</p>
                 </CardContent>
+                <CardFooter className="pt-0">
+                  <Button asChild className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full">
+                    <a href="#contact">Book</a>
+                  </Button>
+                </CardFooter>
               </Card>
             ))}
           </div>
