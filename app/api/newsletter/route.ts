@@ -1,8 +1,6 @@
 import { Resend } from 'resend'
 import { NextResponse } from 'next/server'
 
-const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null
-
 export async function POST(request: Request) {
   try {
     const { email } = await request.json()
@@ -14,15 +12,18 @@ export async function POST(request: Request) {
       )
     }
 
-    if (!resend) {
-      console.log('Newsletter signup (email not configured):', email)
-      return NextResponse.json({ success: true })
+    const apiKey = process.env.RESEND_API_KEY
+    if (!apiKey) {
+      console.log('RESEND_API_KEY not found')
+      return NextResponse.json({ success: true, note: 'no_api_key' })
     }
 
-    // Send notification email to you
-    await resend.emails.send({
+    const resend = new Resend(apiKey)
+    const toEmail = process.env.CONTACT_EMAIL || 'openroadwellnessco@gmail.com'
+
+    const result = await resend.emails.send({
       from: 'Open Road Wellness <hello@send.openroadwellness.org>',
-      to: process.env.CONTACT_EMAIL || 'openroadwellnessco@gmail.com',
+      to: toEmail,
       subject: 'New Newsletter Subscriber!',
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
@@ -36,11 +37,12 @@ export async function POST(request: Request) {
       `,
     })
 
-    return NextResponse.json({ success: true })
+    console.log('Resend result:', result)
+    return NextResponse.json({ success: true, result })
   } catch (error) {
     console.error('Newsletter signup error:', error)
     return NextResponse.json(
-      { error: 'Failed to process signup' },
+      { error: 'Failed to process signup', details: String(error) },
       { status: 500 }
     )
   }
