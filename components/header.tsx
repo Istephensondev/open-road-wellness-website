@@ -57,9 +57,9 @@ export function Header() {
               <Button 
                 size="sm" 
                 className="bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600 hover:shadow-lg hover:shadow-amber-500/30 font-sans font-medium rounded-full px-6 py-2 transition-all hover:scale-105"
-                onClick={() => scrollToSection("packages")}
+                onClick={() => scrollToSection("contact")}
               >
-                Book a Session
+                Let's Connect
               </Button>
             </li>
           </ul>
@@ -111,9 +111,9 @@ export function Header() {
               <li className="pt-2">
                 <Button 
                   className="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:shadow-lg font-sans font-medium rounded-full py-6"
-                  onClick={() => scrollToSection("packages")}
+                  onClick={() => scrollToSection("contact")}
                 >
-                  Book a Session
+                  Let's Connect
                 </Button>
               </li>
             </ul>
