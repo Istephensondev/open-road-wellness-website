@@ -72,38 +72,65 @@ export function About() {
               About Me
             </p>
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-8 leading-tight">
-              Your Guide on the Path to{" "}
-              <span className="gradient-text">Wellness</span>
+              Hi, I'm <span className="gradient-text">Ivy</span>
             </h2>
             <div className="space-y-5 text-muted-foreground leading-relaxed mb-10 text-lg">
               <p>
-                Welcome to Open Road Wellness. I believe that healing is not a destination but a 
-                journey—one that unfolds uniquely for each person who embarks upon it.
+                I'm a certified hypnosis practitioner, intuitive, and musician, and the owner of Open Road Wellness. I believe that healing is not a destination, but a journey—one that opens new roads, pathways, and beginnings unique to each person who chooses to embark upon it.
               </p>
               <p>
-                With years of experience in hypnotherapy, intuitive guidance, and sound healing, 
-                I have dedicated my practice to creating a safe, nurturing space where transformation 
-                can naturally occur.
+                I've created a safe, nurturing space where transformation can naturally unfold, whether you join me in my mobile wellness van, attend a guided sound bath, or connect virtually. My goal is to make your experience personal, accessible, and deeply restorative.
               </p>
-            </div>
+              <p className="font-medium text-foreground">
+                Here's how my services support real, measurable healing:
+              </p>
 
-            {/* Credentials/highlights */}
-            <div className="grid grid-cols-2 gap-4 mb-10">
-              <div className="text-center p-6 bg-gradient-to-br from-card to-secondary rounded-2xl border border-border/50 shadow-lg group hover:shadow-xl transition-all hover:-translate-y-1">
-                <p className="font-serif text-3xl gradient-text mb-2 group-hover:scale-110 transition-transform inline-block">100%</p>
-                <p className="text-sm text-muted-foreground">Certified Practitioner</p>
+              {/* Hypnosis Section */}
+              <div className="bg-card/50 rounded-xl p-5 border border-border/50">
+                <h3 className="font-serif text-xl text-foreground mb-3">Hypnosis</h3>
+                <p className="mb-3">
+                  As a certified hypnosis practitioner, I guide clients into a deeply relaxed, focused state where the subconscious mind can reframe limiting beliefs, reduce anxiety, and support lasting behavior change. Research shows that hypnosis can:
+                </p>
+                <ul className="list-disc list-inside space-y-1 ml-2 mb-3">
+                  <li>Reduce stress, anxiety, and chronic pain</li>
+                  <li>Improve sleep quality and insomnia</li>
+                  <li>Help break habits, including smoking and overeating</li>
+                  <li>Increase confidence, motivation, and performance in personal or professional areas</li>
+                </ul>
+                <p className="text-sm italic">
+                  Studies show hypnosis has a success rate of 60–80% for behavior change goals when combined with supportive guidance.
+                </p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-card to-secondary rounded-2xl border border-border/50 shadow-lg group hover:shadow-xl transition-all hover:-translate-y-1">
-                <p className="font-serif text-3xl gradient-text mb-2 group-hover:scale-110 transition-transform inline-block">Countless</p>
-                <p className="text-sm text-muted-foreground">Guided on Their Path</p>
+
+              {/* Intuitive Reading Section */}
+              <div className="bg-card/50 rounded-xl p-5 border border-border/50">
+                <h3 className="font-serif text-xl text-foreground mb-3">Intuitive Reading</h3>
+                <p>
+                  Through intuitive guidance, I help clients gain insight into patterns, challenges, and opportunities they may not see on their own. This clarity can lead to better decision-making, increased self-awareness, and emotional alignment, supporting long-term mental and emotional health.
+                </p>
               </div>
+
+              {/* Sound Bath Section */}
+              <div className="bg-card/50 rounded-xl p-5 border border-border/50">
+                <h3 className="font-serif text-xl text-foreground mb-3">Sound Bath</h3>
+                <p>
+                  Using the power of music and vibration, sound baths entrain brainwaves into calm, restorative states, lower cortisol, and activate the parasympathetic nervous system. Sessions can promote relaxation, release tension, and refresh mental clarity, helping the body and mind reset naturally.
+                </p>
+              </div>
+
+              <p>
+                Clients can choose hypnosis, intuitive reading, or sound bath individually, or combine them for a deeper, multi-layered experience. Each session is designed to meet your unique needs, support personal transformation, and open doors to new possibilities and fresh beginnings.
+              </p>
+              <p className="font-medium text-foreground italic">
+                Your journey is uniquely yours—and I'm here to walk with you as you explore new pathways and embrace the possibilities ahead.
+              </p>
             </div>
 
             <Button 
               asChild
               className="bg-gradient-to-r from-primary to-primary/90 text-primary-foreground hover:shadow-lg hover:shadow-primary/25 px-8 py-6 rounded-full text-base transition-all hover:scale-105"
             >
-              <a href="#newsletter">
+              <a href="#contact">
                 Get in Touch
               </a>
             </Button>
