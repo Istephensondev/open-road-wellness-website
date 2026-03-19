@@ -195,7 +195,7 @@ export function Contact() {
                 
                 <optgroup label="Single Sessions">
                   <option value="hypnosis">Hypnosis - Mind Reset ($70)</option>
-                  <option value="intuitive-reading">Intuitive Reading - Clarity Session ($30)</option>
+                  <option value="intuitive-reading">Intuitive Reading - Clarity Session ($15/$30)</option>
                   <option value="sound-bath">Sound Bath - Vibrational Reset ($50)</option>
                 </optgroup>
                 

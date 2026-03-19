@@ -13,8 +13,8 @@ const singleSessions = [
   },
   {
     name: "Intuitive Reading - Clarity Session",
-    duration: "30 min",
-    price: "$30",
+    duration: "15 min / 30 min",
+    price: "$15 / $30",
     description: "Gain insight, clarity, and guidance for next steps",
   },
   {
