@@ -117,9 +117,7 @@ const specialtyPrograms = [
     duration: "3 weeks",
     price: "$175",
     sessions: [
-      "Break habit",
-      "Eliminate cravings",
-      "Reinforce long-term change",
+      "2 Hypnosis Sessions",
       "1 Follow-Up Session",
     ],
     extras: [
@@ -141,9 +139,7 @@ const specialtyPrograms = [
     duration: "3 weeks",
     price: "$175",
     sessions: [
-      "Shift relationship with food",
-      "Release emotional eating patterns",
-      "Build healthy habits",
+      "2 Hypnosis Sessions",
       "1 Follow-Up Session",
     ],
     extras: [
@@ -165,9 +161,7 @@ const specialtyPrograms = [
     duration: "3 weeks",
     price: "$175",
     sessions: [
-      "Calm the nervous system",
-      "Release anxious thought patterns",
-      "Build inner resilience",
+      "2 Hypnosis Sessions",
       "1 Follow-Up Session",
     ],
     extras: [
@@ -189,9 +183,7 @@ const specialtyPrograms = [
     duration: "3 weeks",
     price: "$175",
     sessions: [
-      "Release limiting beliefs",
-      "Build self-worth",
-      "Strengthen inner confidence",
+      "2 Hypnosis Sessions",
       "1 Follow-Up Session",
     ],
     extras: [
@@ -329,7 +321,7 @@ export function Packages() {
         {/* Specialty Programs */}
         <div className="mb-12">
           <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Specialty Programs - Focused Transformation</h3>
-          <p className="text-white/80 text-center mb-8 max-w-2xl mx-auto text-base md:text-lg">Each 3-week program includes 3 hypnosis sessions + 1 follow-up, personalized notes, and ongoing support.</p>
+          <p className="text-white/80 text-center mb-8 max-w-2xl mx-auto text-base md:text-lg">Each 3-week program includes 2 hypnosis sessions + 1 follow-up, personalized notes, and ongoing support.</p>
           <div className="grid md:grid-cols-2 gap-6">
             {specialtyPrograms.map((program, index) => (
               <Card key={program.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-xl transition-all duration-500 hover:shadow-2xl flex flex-col ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
