@@ -67,9 +67,9 @@ const multiSessionPrograms = [
 const fullImmersionPrograms = [
   {
     name: "Mind-Body-Soul Immersion",
-    duration: "4-6 weeks",
-    price: "$620",
-    includes: "5-6 Hypnosis + 3 Intuitive Readings + 3 Sound Baths",
+    duration: "4 weeks",
+    price: "$440",
+    includes: "4 Hypnosis + 3 Intuitive Readings",
     features: [
       "Complete transformation experience",
       "Session notes + insight tracking",
@@ -81,9 +81,9 @@ const fullImmersionPrograms = [
   },
   {
     name: "Mind & Intuition Immersion",
-    duration: "4-6 weeks",
-    price: "$590",
-    includes: "5 Hypnosis + 3 Intuitive Readings + optional recordings",
+    duration: "4 weeks",
+    price: "$440",
+    includes: "4 Hypnosis + 3 Intuitive Readings",
     features: [
       "Focus on mindset + intuitive alignment",
       "Personalized notes + exercises",
