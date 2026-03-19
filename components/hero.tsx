@@ -113,7 +113,7 @@ export function Hero() {
               </svg>
             </a>
             <a 
-              href="https://tiktok.com" 
+              href="https://tiktok.com/@openroadwellness" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-black flex items-center justify-center text-white hover:scale-110 hover:shadow-lg transition-all"
@@ -135,7 +135,7 @@ export function Hero() {
               </svg>
             </a>
             <a 
-              href="https://youtube.com" 
+              href="https://youtube.com/@openroadwellness" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white hover:scale-110 hover:shadow-lg transition-all"
