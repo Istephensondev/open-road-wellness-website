@@ -102,7 +102,7 @@ export function Hero() {
           {/* Social Media Icons */}
           <div className="flex items-center justify-center gap-4 mb-6">
             <a 
-              href="https://instagram.com" 
+              href="https://instagram.com/openroadwellness" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 flex items-center justify-center text-white hover:scale-110 hover:shadow-lg transition-all"
