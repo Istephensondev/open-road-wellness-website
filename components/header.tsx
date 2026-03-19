@@ -32,7 +32,7 @@ export function Header() {
         <div className="flex items-center justify-between">
           <a 
             href="#" 
-            className="font-serif text-xl text-amber-900 hover:text-amber-600 transition-colors"
+            className="font-serif text-base md:text-xl text-amber-900 hover:text-amber-600 transition-colors"
             onClick={(e) => {
               e.preventDefault()
               window.scrollTo({ top: 0, behavior: "smooth" })
