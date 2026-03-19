@@ -40,9 +40,9 @@ const dualSession = {
 const multiSessionPrograms = [
   {
     name: "Pathway to Transformation",
-    duration: "2-4 weeks",
+    duration: "2 weeks",
     price: "$270",
-    includes: "3 Hypnosis + 2 Intuitive Readings",
+    includes: "2 Hypnosis + 2 Intuitive Readings",
     features: [
       "Step-by-step mindset and habit support",
       "Personalized notes to take home",
@@ -52,9 +52,9 @@ const multiSessionPrograms = [
   },
   {
     name: "Clarity & Confidence",
-    duration: "2-4 weeks",
+    duration: "2 weeks",
     price: "$260",
-    includes: "3 Hypnosis + 1 Intuitive Reading + 1 Sound Bath",
+    includes: "2 Hypnosis + 2 Intuitive Readings",
     features: [
       "Structured transformation approach",
       "Notes + reflection tools",
