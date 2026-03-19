@@ -42,7 +42,7 @@ export function Hero() {
     <section className="relative min-h-[70vh] overflow-hidden bg-white">
       {/* Floating gradient box behind content */}
       <div 
-        className="absolute top-8 bottom-8 left-4 right-4 md:top-32 md:bottom-32 md:left-32 md:right-32 lg:top-36 lg:bottom-36 lg:left-40 lg:right-40 shadow-2xl animate-gradient-box" 
+        className="absolute top-24 bottom-24 left-24 right-24 md:top-32 md:bottom-32 md:left-32 md:right-32 lg:top-36 lg:bottom-36 lg:left-40 lg:right-40 shadow-2xl animate-gradient-box" 
         style={{
           background: 'linear-gradient(-45deg, #fde047, #fb923c, #f97316, #a855f7, #7c3aed, #f97316, #fde047)',
           backgroundSize: '400% 400%',
@@ -65,11 +65,11 @@ export function Hero() {
           
           {/* Content - Left Side */}
           <div className={`flex-1 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="bg-white/90 backdrop-blur-md border border-amber-200/50 rounded-2xl p-5 md:p-10 shadow-2xl shadow-amber-200/30">
-          <p className="text-amber-600 text-sm md:text-lg tracking-[0.2em] md:tracking-[0.3em] uppercase mb-6 font-sans font-medium">
+            <div className="bg-white/90 backdrop-blur-md border border-amber-200/50 rounded-2xl p-8 md:p-10 shadow-2xl shadow-amber-200/30">
+          <p className="text-amber-600 text-base md:text-lg tracking-[0.3em] uppercase mb-6 font-sans font-medium whitespace-nowrap">
             Holistic Healing & Transformation
           </p>
-          <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-medium text-amber-950 mb-2 leading-tight tracking-tight">
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-amber-950 mb-2 leading-none tracking-tight whitespace-nowrap">
             Open Road <span className="text-amber-600">Wellness</span>
           </h1>
           <p className="text-amber-700/80 text-base md:text-lg tracking-wide mb-6 font-sans">
