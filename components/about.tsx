@@ -79,7 +79,7 @@ export function About() {
                 I'm a certified hypnosis practitioner, intuitive, and musician, and the owner of Open Road Wellness. I believe that healing is not a destination, but a journey—one that opens new roads, pathways, and beginnings unique to each person who chooses to embark upon it.
               </p>
               <p>
-                I've created a safe, nurturing space where transformation can naturally unfold, whether you join me in my mobile wellness van, attend a guided sound bath, or connect virtually. My goal is to make your experience personal, accessible, and deeply restorative.
+                I've created a safe, nurturing space where transformation can naturally unfold, whether you join me for a guided sound bath or connect virtually. My goal is to make your experience personal, accessible, and deeply restorative.
               </p>
               <p className="font-medium text-foreground">
                 Here's how my services support real, measurable healing:

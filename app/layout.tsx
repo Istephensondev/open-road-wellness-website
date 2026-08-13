@@ -15,9 +15,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Open Road Wellness | Hypnosis, Intuitive Readings & Sound Baths in Nashville, TN',
-  description: 'Open Road Wellness in Nashville, TN offers hypnosis, intuitive readings, and sound bath experiences. Serving clients locally in Nashville and online worldwide. Begin your journey to inner peace and holistic healing.',
-  keywords: 'hypnosis Nashville TN, intuitive readings Nashville, sound bath Nashville, holistic healing Nashville, wellness Nashville Tennessee, online hypnosis, virtual wellness sessions',
+  title: 'Open Road Wellness | Chair Yoga, Senior Movement & Sound Healing in Central Florida',
+  description: 'Open Road Wellness brings chair yoga, gentle movement, hypnosis, and sound bath experiences to senior living communities and individuals across Sanford, DeLand, Daytona, and Orlando, FL.',
+  keywords: 'chair yoga Sanford FL, senior yoga Central Florida, assisted living wellness programs, gentle movement for seniors, hypnosis Sanford, sound bath Central Florida, retirement community yoga instructor',
   generator: 'v0.app',
   icons: {
     icon: [

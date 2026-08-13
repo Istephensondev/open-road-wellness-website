@@ -7,6 +7,30 @@ import { useEffect, useRef, useState } from "react"
 
 const services = [
   {
+    title: "Chair Yoga",
+    description: "Accessible, seated yoga designed for seniors and those with limited mobility — building strength, flexibility, and calm from a chair. Offered in 45-minute and one-hour classes.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8" aria-hidden="true">
+        <circle cx="12" cy="5" r="2.5" />
+        <path d="M9 22v-6H7a2 2 0 01-2-2v-3h14v3a2 2 0 01-2 2h-2v6" />
+        <path d="M9 11V9a3 3 0 016 0v2" />
+      </svg>
+    ),
+  },
+  {
+    title: "Gentle Dance & Movement",
+    description: "Fun, low-impact movement sessions that get bodies moving and spirits lifted, adapted for all mobility levels.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8" aria-hidden="true">
+        <circle cx="12" cy="5" r="2.5" />
+        <path d="M12 8v5l-3 6" />
+        <path d="M12 13l4 2" />
+        <path d="M9 11c-2 1-3 0-4-1" />
+        <path d="M15 11c2 1 3.5 2 5 1" />
+      </svg>
+    ),
+  },
+  {
     title: "Hypnosis",
     description: "Unlock your subconscious mind to release limiting beliefs and create lasting positive change.",
     icon: (
@@ -14,15 +38,6 @@ const services = [
         <circle cx="12" cy="12" r="10" className="opacity-30" />
         <circle cx="12" cy="12" r="6" className="opacity-60" />
         <circle cx="12" cy="12" r="2" />
-      </svg>
-    ),
-  },
-  {
-    title: "Intuitive Readings",
-    description: "Gain clarity and insight into your life's path through personalized intuitive readings.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8" aria-hidden="true">
-        <path d="M12 3L15 9L21 10L16.5 15L18 21L12 18L6 21L7.5 15L3 10L9 9L12 3Z" />
       </svg>
     ),
   },
@@ -115,16 +130,28 @@ export function AboutServices() {
               
               <div className="space-y-4 text-amber-800/80 leading-relaxed mb-8 text-base md:text-lg">
                 <p>
-                  I'm a certified hypnosis practitioner, intuitive, and musician, and the owner of Open Road Wellness. I believe that healing is not a destination, but a journey—one that opens new roads, pathways, and beginnings unique to each person who chooses to embark upon it.
+                  I&apos;m a certified yoga instructor and hypnosis practitioner, and the owner of Open Road Wellness. I believe wellness should be accessible to everyone, at every age and every ability — which is why I specialize in chair yoga and gentle movement classes designed specifically for seniors, alongside hypnosis and sound bath experiences for anyone looking to reset and restore.
                 </p>
                 <p>
-                  I've created a safe, nurturing space where transformation can naturally unfold, whether you join me in my mobile wellness van, attend a guided sound bath, or connect virtually. My goal is to make your experience personal, accessible, and deeply restorative.
+                  I bring my sessions directly to you — whether that&apos;s a retirement community activity room, an assisted living facility, or a private one-on-one session. My goal is to make every session personal, accessible, and genuinely restorative, no matter your mobility level or experience with movement and wellness practices.
                 </p>
                 <p className="font-medium text-amber-950">
-                  Here's how my services support real, measurable healing—through hypnosis, intuitive reading, or sound bath:
+                  Here&apos;s how I support real, measurable wellbeing:
                 </p>
 
-                {/* Hypnosis */}
+                <div className="bg-purple-50/80 rounded-xl p-5 border border-purple-200/50">
+                  <h3 className="font-serif text-xl text-amber-950 mb-2">Chair Yoga &amp; Gentle Movement</h3>
+                  <p className="text-base mb-2">
+                    Designed specifically for seniors and individuals with limited mobility, my chair yoga and gentle dance classes bring the benefits of movement to every body, regardless of flexibility or fitness level. These sessions can help:
+                  </p>
+                  <ul className="list-disc list-inside text-base space-y-1 ml-1 mb-2">
+                    <li>Improve joint mobility, balance, and flexibility</li>
+                    <li>Reduce stiffness from arthritis and chronic conditions</li>
+                    <li>Support fall prevention through better body awareness</li>
+                    <li>Boost mood, energy, and social connection</li>
+                  </ul>
+                </div>
+
                 <div className="bg-purple-50/80 rounded-xl p-5 border border-purple-200/50">
                   <h3 className="font-serif text-xl text-amber-950 mb-2">Hypnosis</h3>
                   <p className="text-base mb-2">
@@ -138,15 +165,6 @@ export function AboutServices() {
                   </ul>
                 </div>
 
-                {/* Intuitive Reading */}
-                <div className="bg-purple-50/80 rounded-xl p-5 border border-purple-200/50">
-                  <h3 className="font-serif text-xl text-amber-950 mb-2">Intuitive Reading</h3>
-                  <p className="text-base">
-                    Through intuitive guidance, I help clients gain insight into patterns, challenges, and opportunities they may not see on their own. This clarity can lead to better decision-making, increased self-awareness, and emotional alignment, supporting long-term mental and emotional health.
-                  </p>
-                </div>
-
-                {/* Sound Bath */}
                 <div className="bg-purple-50/80 rounded-xl p-5 border border-purple-200/50">
                   <h3 className="font-serif text-xl text-amber-950 mb-2">Sound Bath</h3>
                   <p className="text-base">
@@ -154,11 +172,8 @@ export function AboutServices() {
                   </p>
                 </div>
 
-                <p>
-                  Clients can choose hypnosis, intuitive reading, or sound bath individually, or combine them for a deeper, multi-layered experience. Each session is designed to meet your unique needs, support personal transformation, and open doors to new possibilities and fresh beginnings.
-                </p>
                 <p className="font-medium text-amber-950 italic">
-                  Your journey is uniquely yours—and I'm here to walk with you as you explore new pathways and embrace the possibilities ahead.
+                  Your journey is uniquely yours — and I&apos;m here to walk with you as you explore new pathways and embrace the possibilities ahead.
                 </p>
               </div>
 
@@ -175,7 +190,7 @@ export function AboutServices() {
 
           {/* Services Column */}
           <div className={`transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-xl border border-purple-200/50 h-full">
+            <div id="services" className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-xl border border-purple-200/50 h-full">
               <p className="text-amber-600 text-sm tracking-[0.3em] uppercase mb-4 font-sans font-medium">
                 What We Offer
               </p>

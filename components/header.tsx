@@ -15,6 +15,13 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const navItems = [
+    { label: "About", id: "about" },
+    { label: "Services", id: "services" },
+    { label: "Communities", id: "communities" },
+    { label: "Packages", id: "packages" },
+  ]
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
     setIsMenuOpen(false)
@@ -43,13 +50,13 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <ul className="hidden md:flex items-center gap-1" role="list">
-            {["About", "Services", "Packages"].map((item) => (
-              <li key={item}>
+            {navItems.map((item) => (
+              <li key={item.id}>
                 <button 
-                  onClick={() => scrollToSection(item.toLowerCase())} 
+                  onClick={() => scrollToSection(item.id)} 
                   className="text-sm font-sans font-medium px-4 py-2 rounded-full text-amber-800 hover:text-amber-950 hover:bg-amber-100 transition-all"
                 >
-                  {item}
+                  {item.label}
                 </button>
               </li>
             ))}
@@ -93,18 +100,18 @@ export function Header() {
         <div 
           id="mobile-menu" 
           className={`md:hidden overflow-hidden transition-all duration-300 ${
-            isMenuOpen ? "max-h-80 opacity-100 mt-4" : "max-h-0 opacity-0"
+            isMenuOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
           }`}
         >
           <div className="pb-4 pt-4">
             <ul className="flex flex-col gap-1" role="list">
-              {["About", "Services", "Packages"].map((item) => (
-                <li key={item}>
+              {navItems.map((item) => (
+                <li key={item.id}>
                   <button 
-                    onClick={() => scrollToSection(item.toLowerCase())} 
+                    onClick={() => scrollToSection(item.id)} 
                     className="block w-full text-left py-3 px-4 rounded-xl transition-colors font-sans text-amber-800 hover:text-amber-950 hover:bg-amber-100"
                   >
-                    {item}
+                    {item.label}
                   </button>
                 </li>
               ))}

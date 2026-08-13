@@ -105,7 +105,7 @@ export function Contact() {
             Let&apos;s Connect
           </h2>
           <p className="text-white/90 leading-relaxed text-lg md:text-xl max-w-xl mx-auto drop-shadow">
-            Schedule a consultation to discuss what fits your needs, or book a session right away.
+            Schedule a consultation, book a session, or ask about bringing chair yoga to your community.
           </p>
           
           {/* Two Calendly Options */}
@@ -194,8 +194,9 @@ export function Contact() {
                 <option value="">Select a service...</option>
                 
                 <optgroup label="Single Sessions">
+                  <option value="chair-yoga">Chair Yoga — Private or Small Group (45 or 60 min, rates negotiable)</option>
+                  <option value="gentle-dance">Gentle Dance & Movement</option>
                   <option value="hypnosis">Hypnosis - Mind Reset ($70)</option>
-                  <option value="intuitive-reading">Intuitive Reading - Clarity Session ($15/$30)</option>
                   <option value="sound-bath">Sound Bath - Vibrational Reset ($50)</option>
                 </optgroup>
                 
@@ -210,19 +211,8 @@ export function Contact() {
                   <option value="confidence">Confidence & Self-Esteem ($175)</option>
                 </optgroup>
                 
-                <optgroup label="Multi-Session Programs">
-                  <option value="pathway-transformation">Pathway to Transformation ($270)</option>
-                  <option value="clarity-confidence">Clarity & Confidence ($260)</option>
-                </optgroup>
-                
-                <optgroup label="Full Immersion Programs">
-                  <option value="mind-body-soul">Mind-Body-Soul Immersion ($620)</option>
-                  <option value="mind-intuition">Mind & Intuition Immersion ($590)</option>
-                </optgroup>
-                
-                <optgroup label="Mobile Van Packages">
-                  <option value="van-escape">Van Escape ($65)</option>
-                  <option value="on-the-go">On-the-Go Transformation ($270)</option>
+                <optgroup label="Facility Booking">
+                  <option value="facility-booking">Chair Yoga for Senior Living Communities (45 or 60 min, rates negotiable)</option>
                 </optgroup>
                 
                 <option value="other">Other / Not Sure</option>
@@ -282,7 +272,7 @@ export function Contact() {
 
         <div className="mt-8 text-center space-y-3">
           <p className="inline-block bg-white rounded-full px-6 py-3 text-purple-700 text-base font-sans shadow-lg">
-            <strong>Based in Nashville, TN</strong> — Serving clients locally & online worldwide
+            <strong>Based in Sanford, FL</strong> — Serving Sanford, DeLand, Daytona Beach, Orlando &amp; Central Florida, plus virtual sessions worldwide
           </p>
           <br />
           <p className="inline-block bg-white rounded-full px-6 py-3 text-purple-700 text-base font-sans shadow-lg">

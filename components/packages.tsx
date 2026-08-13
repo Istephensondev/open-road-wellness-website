@@ -1,21 +1,21 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { useEffect, useRef, useState } from "react"
 
 const singleSessions = [
+  {
+    name: "Chair Yoga — Private or Small Group",
+    duration: "45 or 60 min",
+    price: "Rates negotiable",
+    description: "Accessible, seated movement to build strength, flexibility, and calm. Classes are offered in 45-minute or one-hour formats, with pricing arranged based on session type and group size.",
+  },
   {
     name: "Hypnosis - Mind Reset",
     duration: "60 min",
     price: "$70",
     description: "Reduce stress, shift limiting beliefs, improve focus & confidence",
-  },
-  {
-    name: "Intuitive Reading - Clarity Session",
-    duration: "15 min / 30 min",
-    price: "$15 / $30",
-    description: "Gain insight, clarity, and guidance for next steps",
   },
   {
     name: "Sound Bath - Vibrational Reset",
@@ -30,86 +30,12 @@ const dualSession = {
   duration: "80 min",
   price: "$85",
   options: [
-    "Hypnosis + Intuitive Reading",
+    "Chair Yoga + Hypnosis",
+    "Chair Yoga + Sound Bath",
     "Hypnosis + Sound Bath",
-    "Intuitive Reading + Sound Bath",
   ],
   benefit: "Deeper reset, clarity, and relaxation in one session",
 }
-
-const multiSessionPrograms = [
-  {
-    name: "Pathway to Transformation",
-    duration: "2 weeks",
-    price: "$220",
-    includes: "2 Hypnosis + 2 Intuitive Readings",
-    features: [
-      "Step-by-step mindset and habit support",
-      "Personalized notes to take home",
-      "Follow-up guidance between sessions",
-      "Increased clarity, confidence, and alignment",
-    ],
-  },
-  {
-    name: "Clarity & Confidence",
-    duration: "2 weeks",
-    price: "$220",
-    includes: "2 Hypnosis + 2 Intuitive Readings",
-    features: [
-      "Structured transformation approach",
-      "Notes + reflection tools",
-      "Ongoing check-ins for support",
-      "Reduced stress, improved focus, stronger confidence",
-    ],
-  },
-]
-
-const fullImmersionPrograms = [
-  {
-    name: "Mind-Body-Soul Immersion",
-    duration: "4 weeks",
-    price: "$440",
-    includes: "4 Hypnosis + 3 Intuitive Readings",
-    features: [
-      "Complete transformation experience",
-      "Session notes + insight tracking",
-      "Home resources (audio/recordings)",
-      "Ongoing follow-up support",
-      "Deep alignment and lasting change",
-    ],
-    popular: true,
-  },
-  {
-    name: "Mind & Intuition Immersion",
-    duration: "4 weeks",
-    price: "$440",
-    includes: "4 Hypnosis + 3 Intuitive Readings",
-    features: [
-      "Focus on mindset + intuitive alignment",
-      "Personalized notes + exercises",
-      "Follow-up check-ins",
-      "Reprogram patterns and gain clarity",
-    ],
-  },
-]
-
-const mobileVanPackages = [
-  {
-    name: "Van Escape",
-    duration: "45 min",
-    price: "$65",
-    includes: "1 Hypnosis OR 1 Intuitive Reading",
-    extra: "Optional 20-min Sound Bath",
-    benefit: "Private, convenient, relaxing experience",
-  },
-  {
-    name: "On-the-Go Transformation",
-    duration: "2-3 weeks",
-    price: "$270",
-    includes: "3 sessions (Hypnosis + Intuitive Reading) + 1 Sound Bath",
-    benefit: "Flexible guided experience with clarity and stress relief",
-  },
-]
 
 const specialtyPrograms = [
   {
@@ -198,14 +124,19 @@ const specialtyPrograms = [
       "Improves performance in work and life",
       "Lasting positive self-image",
     ],
-    addOn: "Intuitive Reading (+$30) for deeper clarity",
+    addOn: "Sound Bath Session (+$40) for deeper relaxation",
   },
 ]
+
+const facilityRate = {
+  name: "Chair Yoga Class — On-Site at Your Community",
+  price: "Rates negotiable",
+  description: "Available as 45-minute or one-hour classes, tailored to your community's group size, schedule, and location. A complimentary trial class is available.",
+}
 
 const addOns = [
   { name: "Home hypnosis recording", price: "$20" },
   { name: "Mini sound bath audio", price: "$15" },
-  { name: "Follow-up intuitive reading (15–20 min)", price: "$25–30" },
 ]
 
 export function Packages() {
@@ -369,103 +300,21 @@ export function Packages() {
           </div>
         </div>
 
-        {/* Multi-Session Programs */}
+        {/* Facility & Group Rates */}
         <div className="mb-12">
-          <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Multi-Session Programs</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            {multiSessionPrograms.map((program, index) => (
-              <Card key={program.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-lg transition-all duration-500 hover:shadow-xl flex flex-col ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
-                <CardHeader className="pb-2">
-                  <CardTitle className="font-serif text-2xl text-amber-950">{program.name}</CardTitle>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-3xl font-serif text-purple-600">{program.price}</span>
-                    <span className="text-base text-amber-700">{program.duration}</span>
-                  </div>
-                  <p className="text-base text-purple-600 font-medium mt-1">{program.includes}</p>
-                </CardHeader>
-                <CardContent className="flex-1">
-                  <ul className="space-y-1">
-                    {program.features.map(feature => (
-                      <li key={feature} className="text-base text-amber-800/80 flex items-start gap-2">
-                        <span className="text-purple-500 mt-1">✓</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardFooter className="pt-0">
-                  <Button asChild className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full">
-                    <a href="#contact">Book</a>
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Full Immersion Programs */}
-        <div className="mb-12">
-          <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Full Immersion Programs <span className="text-yellow-300">(Premium)</span></h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            {fullImmersionPrograms.map((program, index) => (
-              <Card key={program.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-xl relative overflow-hidden transition-all duration-500 hover:shadow-2xl flex flex-col ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
-                {program.popular && (
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-orange-400 to-purple-500" />
-                )}
-                <CardHeader className="pb-2">
-                  <CardTitle className="font-serif text-2xl text-amber-950">{program.name}</CardTitle>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-3xl font-serif text-purple-600">{program.price}</span>
-                    <span className="text-base text-amber-700">{program.duration}</span>
-                  </div>
-                  <p className="text-base text-purple-600 font-medium mt-1">{program.includes}</p>
-                </CardHeader>
-                <CardContent className="flex-1">
-                  <ul className="space-y-1">
-                    {program.features.map(feature => (
-                      <li key={feature} className="text-base text-amber-800/80 flex items-start gap-2">
-                        <span className="text-purple-500 mt-1">✓</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardFooter className="pt-0">
-                  <Button asChild className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full">
-                    <a href="#contact">Book</a>
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Mobile Van Packages */}
-        <div className="mb-12">
-          <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Mobile Van Packages</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            {mobileVanPackages.map((pkg, index) => (
-              <Card key={pkg.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-lg transition-all duration-500 hover:shadow-xl flex flex-col ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
-                <CardHeader className="pb-2">
-                  <CardTitle className="font-serif text-2xl text-amber-950">{pkg.name}</CardTitle>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-3xl font-serif text-purple-600">{pkg.price}</span>
-                    <span className="text-base text-amber-700">{pkg.duration}</span>
-                  </div>
-                  <p className="text-base text-purple-600 font-medium mt-1">{pkg.includes}</p>
-                </CardHeader>
-                <CardContent className="flex-1">
-                  {pkg.extra && <p className="text-base text-orange-600 mb-2">{pkg.extra}</p>}
-                  <p className="text-base text-amber-800/80 italic">{pkg.benefit}</p>
-                </CardContent>
-                <CardFooter className="pt-0">
-                  <Button asChild className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full">
-                    <a href="#contact">Book</a>
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
+          <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Facility &amp; Group Rates</h3>
+          <Card className={`bg-white/95 backdrop-blur-sm border-0 shadow-lg max-w-2xl mx-auto transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <CardHeader className="text-center pb-2">
+              <CardTitle className="font-serif text-2xl text-amber-950">{facilityRate.name}</CardTitle>
+              <span className="text-2xl font-serif text-purple-600">{facilityRate.price}</span>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="text-base text-amber-800/80 mb-4">{facilityRate.description}</p>
+              <Button asChild className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-8">
+                <a href="#contact">Request a quote</a>
+              </Button>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Add-Ons */}

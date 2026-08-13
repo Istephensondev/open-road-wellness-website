@@ -1,7 +1,5 @@
-import { Resend } from 'resend'
 import { NextResponse } from 'next/server'
-
-const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null
+import { escapeHtml, sendTransactionalEmail } from '@/lib/send-email'
 
 export async function POST(request: Request) {
   try {
@@ -14,38 +12,42 @@ export async function POST(request: Request) {
       )
     }
 
-    if (!resend) {
-      console.log('Contact form submission (email not configured):', { name, email, service, message })
-      return NextResponse.json({ success: true })
-    }
-
     const serviceLabels: Record<string, string> = {
+      'chair-yoga': 'Chair Yoga — Private or Small Group',
+      'gentle-dance': 'Gentle Dance & Movement',
       'hypnosis': 'Hypnosis',
-      'intuitive-readings': 'Intuitive Readings',
       'sound-bath': 'Sound Bath',
-      'package': 'Package Deal',
+      'mini-transformation': 'Mini Transformation',
+      'smoke-free': 'Smoke-Free Transformation',
+      'weight-loss': 'Weight Loss & Healthy Habits',
+      'anxiety-relief': 'Anxiety & Stress Relief',
+      'confidence': 'Confidence & Self-Esteem',
+      'facility-booking': 'Chair Yoga for Senior Living Communities',
       'other': 'Other / Not Sure'
     }
 
-    await resend.emails.send({
-      from: 'Open Road Wellness <hello@openroadwellness.org>',
-      to: process.env.CONTACT_EMAIL || 'openroadwellnessco@gmail.com',
-      replyTo: email,
+    const safeName = escapeHtml(String(name))
+    const safeEmail = escapeHtml(String(email))
+    const safeService = escapeHtml(serviceLabels[service] || 'Not specified')
+    const safeMessage = escapeHtml(String(message))
+
+    await sendTransactionalEmail({
+      replyTo: String(email),
       subject: `New Contact: ${name} - ${serviceLabels[service] || 'General Inquiry'}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #78350f;">New Contact Form Submission</h2>
           <div style="background: #fef3c7; padding: 20px; border-radius: 12px; margin: 20px 0;">
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Service Interest:</strong> ${serviceLabels[service] || 'Not specified'}</p>
+            <p><strong>Name:</strong> ${safeName}</p>
+            <p><strong>Email:</strong> ${safeEmail}</p>
+            <p><strong>Service Interest:</strong> ${safeService}</p>
           </div>
           <div style="background: #f5f5f4; padding: 20px; border-radius: 12px;">
             <p><strong>Message:</strong></p>
-            <p style="white-space: pre-wrap;">${message}</p>
+            <p style="white-space: pre-wrap;">${safeMessage}</p>
           </div>
           <p style="color: #78716c; font-size: 14px; margin-top: 20px;">
-            Reply directly to this email to respond to ${name}.
+            Reply directly to this email to respond to ${safeName}.
           </p>
         </div>
       `
