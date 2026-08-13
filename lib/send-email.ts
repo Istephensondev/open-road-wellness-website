@@ -10,10 +10,12 @@ export function escapeHtml(value: string) {
 }
 
 export async function sendTransactionalEmail({
+  to,
   subject,
   html,
   replyTo,
 }: {
+  to?: string
   subject: string
   html: string
   replyTo?: string
@@ -24,7 +26,7 @@ export async function sendTransactionalEmail({
   }
 
   const resend = new Resend(apiKey)
-  const to = process.env.CONTACT_EMAIL || "openroadwellnessco@gmail.com"
+  const recipient = to || process.env.CONTACT_EMAIL || "openroadwellnessco@gmail.com"
   const fromAddresses = [
     "Open Road Wellness <hello@openroadwellness.org>",
     "Open Road Wellness <onboarding@resend.dev>",
@@ -35,7 +37,7 @@ export async function sendTransactionalEmail({
   for (const from of fromAddresses) {
     const { data, error } = await resend.emails.send({
       from,
-      to,
+      to: recipient,
       replyTo,
       subject,
       html,

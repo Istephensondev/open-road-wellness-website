@@ -8,7 +8,7 @@ import { useEffect, useState } from "react"
 export function Hero() {
   const [isVisible, setIsVisible] = useState(false)
   const [email, setEmail] = useState("")
-  const [status, setStatus] = useState<"idle" | "success">("idle")
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle")
 
   useEffect(() => {
     setIsVisible(true)
@@ -27,9 +27,14 @@ export function Hero() {
           setStatus("success")
           setEmail("")
           setTimeout(() => setStatus("idle"), 3000)
+        } else {
+          setStatus("error")
+          setTimeout(() => setStatus("idle"), 5000)
         }
       } catch (error) {
         console.error('Newsletter signup error:', error)
+        setStatus("error")
+        setTimeout(() => setStatus("idle"), 5000)
       }
     }
   }
@@ -157,6 +162,15 @@ export function Hero() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
               <span className="text-green-700 text-sm font-sans">Thank you for subscribing!</span>
+            </div>
+          )}
+          {status === "error" && (
+            <div 
+              className="inline-flex items-center gap-2 bg-red-100 backdrop-blur-sm rounded-full px-5 py-2 animate-scale-in" 
+              role="alert" 
+              aria-live="polite"
+            >
+              <span className="text-red-700 text-sm font-sans">Something went wrong. Please try again.</span>
             </div>
           )}
             </div>
