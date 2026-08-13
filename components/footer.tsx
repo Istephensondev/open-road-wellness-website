@@ -4,13 +4,28 @@ export function Footer() {
   return (
     <footer className="py-12 px-4 bg-foreground text-background">
       <div className="max-w-5xl mx-auto">
-        <div className="grid sm:grid-cols-3 gap-8 mb-8">
+        <div className="grid sm:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
             <h3 className="font-serif text-2xl mb-4">Open Road Wellness</h3>
             <p className="text-background/70 text-sm leading-relaxed">
               Bringing accessible movement, healing, and wellness to Central Florida — one session at a time.
             </p>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="font-sans text-sm uppercase tracking-wider mb-4 text-background/80">
+              Services
+            </h4>
+            <ul className="text-sm text-background/70 space-y-2">
+              <li><a href="/chair-yoga" className="hover:text-background transition-colors">Chair Yoga</a></li>
+              <li><a href="/gentle-movement" className="hover:text-background transition-colors">Gentle Movement</a></li>
+              <li><a href="/hypnosis" className="hover:text-background transition-colors">Hypnosis</a></li>
+              <li><a href="/group-guided-meditation" className="hover:text-background transition-colors">Group Guided Meditations</a></li>
+              <li><a href="/sound-bath" className="hover:text-background transition-colors">Sound Baths</a></li>
+              <li><a href="/senior-living-wellness" className="hover:text-background transition-colors">Senior Living Communities</a></li>
+            </ul>
           </div>
 
           {/* Contact */}

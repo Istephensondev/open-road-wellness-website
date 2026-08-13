@@ -81,7 +81,7 @@ export function Hero() {
             Chair Yoga · Gentle Movement · Hypnosis · Group Guided Meditation · Sound Bath
           </p>
           <p className="text-amber-900/70 text-lg md:text-xl mb-6 max-w-2xl mx-auto leading-relaxed font-sans">
-            Bringing accessible movement and holistic healing to seniors and individuals across Central Florida.
+            Bringing accessible movement and holistic healing to seniors and individuals in Sanford, FL and across Central Florida.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 mb-8 font-sans">
             <a href="tel:+16159731158" className="text-amber-950 font-medium hover:text-purple-600 transition-colors">

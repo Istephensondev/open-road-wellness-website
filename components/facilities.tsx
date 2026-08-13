@@ -85,12 +85,21 @@ export function Facilities() {
           <p className="text-amber-900 text-base md:text-lg mb-6">
             <strong>Interested in bringing a class to your residents?</strong> I&apos;d love to schedule a session for your community.
           </p>
-          <Button
-            asChild
-            className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-6 rounded-full text-base transition-all hover:scale-105 shadow-lg shadow-purple-600/25"
-          >
-            <a href="#contact">Contact me to schedule</a>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button
+              asChild
+              className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-6 rounded-full text-base transition-all hover:scale-105 shadow-lg shadow-purple-600/25"
+            >
+              <a href="#contact">Contact me to schedule</a>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="border-purple-300 text-purple-700 hover:bg-purple-50 px-8 py-6 rounded-full text-base"
+            >
+              <a href="/senior-living-wellness">Learn more about community classes</a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>

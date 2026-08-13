@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react"
 const services = [
   {
     title: "Chair Yoga",
+    href: "/chair-yoga",
     description: "Accessible, seated yoga designed for seniors and those with limited mobility — building strength, flexibility, and calm from a chair. Offered in 45-minute and one-hour classes.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8" aria-hidden="true">
@@ -19,6 +20,7 @@ const services = [
   },
   {
     title: "Gentle Dance & Movement",
+    href: "/gentle-movement",
     description: "Fun, low-impact movement sessions that get bodies moving and spirits lifted, adapted for all mobility levels.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8" aria-hidden="true">
@@ -32,6 +34,7 @@ const services = [
   },
   {
     title: "Hypnosis",
+    href: "/hypnosis",
     description: "Unlock your subconscious mind to release limiting beliefs and create lasting positive change.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8" aria-hidden="true">
@@ -43,6 +46,7 @@ const services = [
   },
   {
     title: "Group Guided Meditations",
+    href: "/group-guided-meditation",
     description: "Shared, calming meditation sessions that help quiet the mind, ease stress, and support deeper rest and focus. Offered for groups, with negotiable rates.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8" aria-hidden="true">
@@ -54,6 +58,7 @@ const services = [
   },
   {
     title: "Sound Baths",
+    href: "/sound-bath",
     description: "Immerse yourself in healing vibrations promoting deep relaxation and energetic balance.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8" aria-hidden="true">
@@ -229,27 +234,28 @@ export function AboutServices() {
 
               <div className="space-y-6">
                 {services.map((service, index) => (
-                  <Card 
-                    key={service.title} 
-                    className={`border border-purple-200/50 bg-gradient-to-br from-white/80 to-purple-50/80 backdrop-blur-sm overflow-hidden group cursor-pointer transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1 hover:border-purple-300 ${
-                      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                    }`}
-                    style={{ transitionDelay: `${(index + 2) * 150}ms` }}
-                  >
-                    <div className="flex items-start gap-4 p-5">
-                      <div className="shrink-0 p-3 rounded-xl bg-gradient-to-br from-orange-400 to-purple-500 text-white shadow-md group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                        {service.icon}
+                  <a key={service.title} href={service.href} className="block">
+                    <Card 
+                      className={`border border-purple-200/50 bg-gradient-to-br from-white/80 to-purple-50/80 backdrop-blur-sm overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1 hover:border-purple-300 ${
+                        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                      }`}
+                      style={{ transitionDelay: `${(index + 2) * 150}ms` }}
+                    >
+                      <div className="flex items-start gap-4 p-5">
+                        <div className="shrink-0 p-3 rounded-xl bg-gradient-to-br from-orange-400 to-purple-500 text-white shadow-md group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                          {service.icon}
+                        </div>
+                        <div>
+                          <CardTitle className="font-serif text-xl text-amber-950 mb-2 group-hover:text-purple-600 transition-colors">
+                            {service.title}
+                          </CardTitle>
+                          <CardDescription className="text-amber-800/70 leading-relaxed text-base">
+                            {service.description}
+                          </CardDescription>
+                        </div>
                       </div>
-                      <div>
-                        <CardTitle className="font-serif text-xl text-amber-950 mb-2 group-hover:text-purple-600 transition-colors">
-                          {service.title}
-                        </CardTitle>
-                        <CardDescription className="text-amber-800/70 leading-relaxed text-base">
-                          {service.description}
-                        </CardDescription>
-                      </div>
-                    </div>
-                  </Card>
+                    </Card>
+                  </a>
                 ))}
               </div>
             </div>

@@ -23,8 +23,12 @@ export function Header() {
   ]
 
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
     setIsMenuOpen(false)
+    if (window.location.pathname === "/") {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
+      return
+    }
+    window.location.href = `/#${id}`
   }
 
   return (
@@ -38,11 +42,13 @@ export function Header() {
       <nav aria-label="Main navigation">
         <div className="flex items-center justify-between">
           <a 
-            href="#" 
+            href="/" 
             className="font-serif text-xl text-amber-900 hover:text-amber-600 transition-colors"
             onClick={(e) => {
-              e.preventDefault()
-              window.scrollTo({ top: 0, behavior: "smooth" })
+              if (window.location.pathname === "/") {
+                e.preventDefault()
+                window.scrollTo({ top: 0, behavior: "smooth" })
+              }
             }}
           >
             <span className="font-semibold">Open Road Wellness</span>
