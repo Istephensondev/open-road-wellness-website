@@ -18,24 +18,18 @@ const singleSessions = [
     description: "Reduce stress, shift limiting beliefs, improve focus & confidence",
   },
   {
+    name: "Group Guided Meditations",
+    duration: "45 or 60 min",
+    price: "Rates negotiable",
+    description: "Shared, calming meditation sessions to ease stress, quiet the mind, and support deeper rest. Pricing is arranged based on group size and session length.",
+  },
+  {
     name: "Sound Bath - Vibrational Reset",
     duration: "30-45 min",
     price: "$50",
     description: "Deep relaxation, nervous system reset, emotional release",
   },
 ]
-
-const dualSession = {
-  name: "Mini Transformation",
-  duration: "80 min",
-  price: "$85",
-  options: [
-    "Chair Yoga + Hypnosis",
-    "Chair Yoga + Sound Bath",
-    "Hypnosis + Sound Bath",
-  ],
-  benefit: "Deeper reset, clarity, and relaxation in one session",
-}
 
 const specialtyPrograms = [
   {
@@ -131,13 +125,8 @@ const specialtyPrograms = [
 const facilityRate = {
   name: "Chair Yoga Class — On-Site at Your Community",
   price: "Rates negotiable",
-  description: "Available as 45-minute or one-hour classes, tailored to your community's group size, schedule, and location. A complimentary trial class is available.",
+  description: "Available as 45-minute or one-hour classes, tailored to your community's group size, schedule, and location.",
 }
-
-const addOns = [
-  { name: "Home hypnosis recording", price: "$20" },
-  { name: "Mini sound bath audio", price: "$15" },
-]
 
 export function Packages() {
   const [isVisible, setIsVisible] = useState(false)
@@ -200,7 +189,7 @@ export function Packages() {
         {/* Single Sessions */}
         <div className="mb-12">
           <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Single-Session Packages</h3>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-2 gap-4">
             {singleSessions.map((session, index) => (
               <Card key={session.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-lg transition-all duration-500 hover:shadow-xl hover:-translate-y-1 flex flex-col ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
                 <CardHeader className="pb-2">
@@ -221,32 +210,6 @@ export function Packages() {
               </Card>
             ))}
           </div>
-        </div>
-
-        {/* Dual Session */}
-        <div className="mb-12">
-          <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Dual-Session Package</h3>
-          <Card className={`bg-white/95 backdrop-blur-sm border-0 shadow-lg max-w-2xl mx-auto transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <CardHeader className="text-center pb-2">
-              <CardTitle className="font-serif text-2xl text-amber-950">{dualSession.name}</CardTitle>
-              <div className="flex items-center justify-center gap-2">
-                <span className="text-3xl font-serif text-purple-600">{dualSession.price}</span>
-                <span className="text-base text-amber-700">{dualSession.duration}</span>
-              </div>
-            </CardHeader>
-            <CardContent className="text-center">
-              <p className="text-base font-medium text-amber-950 mb-2">Choose any 2:</p>
-              <div className="flex flex-wrap justify-center gap-2 mb-3">
-                {dualSession.options.map(opt => (
-                  <span key={opt} className="text-sm bg-purple-100 text-purple-700 px-3 py-1 rounded-full">{opt}</span>
-                ))}
-              </div>
-              <p className="text-base text-amber-800/80 italic mb-4">{dualSession.benefit}</p>
-              <Button asChild className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-8">
-                <a href="#contact">Book</a>
-              </Button>
-            </CardContent>
-          </Card>
         </div>
 
         {/* Specialty Programs */}
@@ -315,19 +278,6 @@ export function Packages() {
               </Button>
             </CardContent>
           </Card>
-        </div>
-
-        {/* Add-Ons */}
-        <div className="mb-8">
-          <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Add-Ons</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {addOns.map(addon => (
-              <div key={addon.name} className={`bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg transition-all duration-500 hover:shadow-xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <span className="text-amber-950 font-medium text-base">{addon.name}</span>
-                <span className="text-purple-600 font-serif ml-2 text-base">{addon.price}</span>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* CTA */}

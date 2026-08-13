@@ -42,6 +42,17 @@ const services = [
     ),
   },
   {
+    title: "Group Guided Meditations",
+    description: "Shared, calming meditation sessions that help quiet the mind, ease stress, and support deeper rest and focus. Offered for groups, with negotiable rates.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8" aria-hidden="true">
+        <path d="M12 3c2.5 3 4 5.5 4 8a4 4 0 11-8 0c0-2.5 1.5-5 4-8z" />
+        <path d="M8 19c1.5-1 2.5-1.5 4-1.5s2.5.5 4 1.5" />
+        <path d="M6 21c2-1.2 4-1.8 6-1.8s4 .6 6 1.8" />
+      </svg>
+    ),
+  },
+  {
     title: "Sound Baths",
     description: "Immerse yourself in healing vibrations promoting deep relaxation and energetic balance.",
     icon: (
@@ -121,16 +132,27 @@ export function AboutServices() {
           {/* About Me Column */}
           <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-xl border border-purple-200/50 h-full overflow-y-auto max-h-[80vh]">
-              <p className="text-amber-600 text-sm tracking-[0.3em] uppercase mb-4 font-sans font-medium">
-                About Me
-              </p>
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-amber-950 mb-6 leading-tight">
-                Hi, I'm <span className="text-purple-600">Ivy</span>
-              </h2>
+              <div className="flex items-center gap-5 mb-6">
+                <div className="shrink-0 w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden shadow-lg ring-4 ring-purple-200/80">
+                  <img
+                    src="/images/ivy-headshot.png"
+                    alt="Ivy, owner of Open Road Wellness"
+                    className="w-full h-full object-cover object-[center_18%]"
+                  />
+                </div>
+                <div>
+                  <p className="text-amber-600 text-sm tracking-[0.3em] uppercase mb-2 font-sans font-medium">
+                    About Me
+                  </p>
+                  <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-amber-950 leading-tight">
+                    Hi, I&apos;m <span className="text-purple-600">Ivy</span>
+                  </h2>
+                </div>
+              </div>
               
               <div className="space-y-4 text-amber-800/80 leading-relaxed mb-8 text-base md:text-lg">
                 <p>
-                  I&apos;m a certified yoga instructor and hypnosis practitioner, and the owner of Open Road Wellness. I believe wellness should be accessible to everyone, at every age and every ability — which is why I specialize in chair yoga and gentle movement classes designed specifically for seniors, alongside hypnosis and sound bath experiences for anyone looking to reset and restore.
+                  I&apos;m a certified yoga instructor and hypnosis practitioner, and the owner of Open Road Wellness. I believe wellness should be accessible to everyone, at every age and every ability — which is why I specialize in chair yoga and gentle movement classes designed specifically for seniors, alongside hypnosis, group guided meditations, and sound bath experiences for anyone looking to reset and restore.
                 </p>
                 <p>
                   I bring my sessions directly to you — whether that&apos;s a retirement community activity room, an assisted living facility, or a private one-on-one session. My goal is to make every session personal, accessible, and genuinely restorative, no matter your mobility level or experience with movement and wellness practices.
@@ -163,6 +185,13 @@ export function AboutServices() {
                     <li>Help break habits, including smoking and overeating</li>
                     <li>Increase confidence, motivation, and performance</li>
                   </ul>
+                </div>
+
+                <div className="bg-purple-50/80 rounded-xl p-5 border border-purple-200/50">
+                  <h3 className="font-serif text-xl text-amber-950 mb-2">Group Guided Meditations</h3>
+                  <p className="text-base">
+                    I offer group guided meditations — a gentle, restorative practice that helps quiet mental chatter, ease anxiety, and invite the body into a deeper state of calm. Sessions are tailored to your group, and rates are negotiable.
+                  </p>
                 </div>
 
                 <div className="bg-purple-50/80 rounded-xl p-5 border border-purple-200/50">

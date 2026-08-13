@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react"
 const partnershipPoints = [
   "Certified yoga instruction with senior-specific training",
   "Full liability insurance",
-  "Background screening on file",
+  "Background screening available",
   "Flexible scheduling to fit your activity calendar",
   "Classes adapted for all mobility and cognitive levels",
 ]
@@ -83,7 +83,7 @@ export function Facilities() {
           </ul>
 
           <p className="text-amber-900 text-base md:text-lg mb-6">
-            <strong>Interested in a free trial class for your residents?</strong> I&apos;d love to bring a session to your community.
+            <strong>Interested in bringing a class to your residents?</strong> I&apos;d love to schedule a session for your community.
           </p>
           <Button
             asChild

@@ -197,11 +197,8 @@ export function Contact() {
                   <option value="chair-yoga">Chair Yoga — Private or Small Group (45 or 60 min, rates negotiable)</option>
                   <option value="gentle-dance">Gentle Dance & Movement</option>
                   <option value="hypnosis">Hypnosis - Mind Reset ($70)</option>
+                  <option value="guided-meditation">Group Guided Meditations (rates negotiable)</option>
                   <option value="sound-bath">Sound Bath - Vibrational Reset ($50)</option>
-                </optgroup>
-                
-                <optgroup label="Dual-Session Package">
-                  <option value="mini-transformation">Mini Transformation ($85)</option>
                 </optgroup>
                 
                 <optgroup label="Specialty Programs">
@@ -276,7 +273,7 @@ export function Contact() {
           </p>
           <br />
           <p className="inline-block bg-white rounded-full px-6 py-3 text-purple-700 text-base font-sans shadow-lg">
-            <strong>Prefer to reach out directly?</strong> Email me at <a href="mailto:openroadwellnessco@gmail.com" className="font-bold underline hover:text-purple-900 transition-colors">openroadwellnessco@gmail.com</a>
+            <strong>Prefer to reach out directly?</strong> Call <a href="tel:+16159731158" className="font-bold underline hover:text-purple-900 transition-colors">615-973-1158</a> or email <a href="mailto:openroadwellnessco@gmail.com" className="font-bold underline hover:text-purple-900 transition-colors">openroadwellnessco@gmail.com</a>
           </p>
         </div>
       </div>

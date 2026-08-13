@@ -78,11 +78,19 @@ export function Hero() {
             Open Road <span className="text-amber-600">Wellness</span>
           </h1>
           <p className="text-amber-700/80 text-base md:text-lg tracking-wide mb-6 font-sans">
-            Chair Yoga · Gentle Movement · Hypnosis · Sound Bath
+            Chair Yoga · Gentle Movement · Hypnosis · Group Guided Meditation · Sound Bath
           </p>
-          <p className="text-amber-900/70 text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed font-sans">
+          <p className="text-amber-900/70 text-lg md:text-xl mb-6 max-w-2xl mx-auto leading-relaxed font-sans">
             Bringing accessible movement and holistic healing to seniors and individuals across Central Florida.
           </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 mb-8 font-sans">
+            <a href="tel:+16159731158" className="text-amber-950 font-medium hover:text-purple-600 transition-colors">
+              615-973-1158
+            </a>
+            <a href="mailto:openroadwellnessco@gmail.com" className="text-amber-950 font-medium hover:text-purple-600 transition-colors">
+              openroadwellnessco@gmail.com
+            </a>
+          </div>
           {/* Newsletter Signup */}
           <p className="text-amber-800/60 text-base mb-3 font-sans">Subscribe to our newsletter</p>
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-6">

@@ -24,6 +24,11 @@ export function Footer() {
                   openroadwellnessco@gmail.com
                 </a>
               </p>
+              <p>
+                <a href="tel:+16159731158" className="hover:text-background transition-colors">
+                  615-973-1158
+                </a>
+              </p>
               <p>Sanford, FL</p>
             </address>
           </div>

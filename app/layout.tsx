@@ -16,8 +16,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Open Road Wellness | Chair Yoga, Senior Movement & Sound Healing in Central Florida',
-  description: 'Open Road Wellness brings chair yoga, gentle movement, hypnosis, and sound bath experiences to senior living communities and individuals across Sanford, DeLand, Daytona, and Orlando, FL.',
-  keywords: 'chair yoga Sanford FL, senior yoga Central Florida, assisted living wellness programs, gentle movement for seniors, hypnosis Sanford, sound bath Central Florida, retirement community yoga instructor',
+  description: 'Open Road Wellness brings chair yoga, gentle movement, hypnosis, group guided meditations, and sound bath experiences to senior living communities and individuals across Sanford, DeLand, Daytona, and Orlando, FL.',
+  keywords: 'chair yoga Sanford FL, senior yoga Central Florida, assisted living wellness programs, gentle movement for seniors, hypnosis Sanford, group guided meditation, sound bath Central Florida, retirement community yoga instructor',
   generator: 'v0.app',
   icons: {
     icon: [
