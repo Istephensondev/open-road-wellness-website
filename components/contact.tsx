@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { SITE_EMAIL, SITE_PHONE, SITE_PHONE_E164 } from "@/lib/site"
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -13,7 +14,7 @@ export function Contact() {
     message: ""
   })
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle")
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
   const sectionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
@@ -72,18 +73,11 @@ export function Contact() {
     <section 
       id="contact" 
       ref={sectionRef}
-      className="py-24 px-4 bg-white relative overflow-hidden" 
+      className="py-14 sm:py-24 px-4 bg-white relative overflow-hidden" 
       aria-labelledby="contact-heading"
     >
-      {/* Static gradient blob background */}
-      <div 
-        className="absolute top-8 bottom-8 left-8 right-8 md:top-12 md:bottom-12 md:left-12 md:right-12 lg:top-16 lg:bottom-16 lg:left-16 lg:right-16 shadow-2xl"
-        style={{
-          background: 'linear-gradient(-45deg, #a855f7, #7c3aed, #f97316, #fb923c, #fde047, #a855f7)',
-          backgroundSize: '400% 400%',
-          backgroundPosition: '50% 50%',
-          borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%',
-        }}
+      <div
+        className="absolute inset-3 sm:inset-8 md:inset-12 lg:inset-16 rounded-[2rem] shadow-2xl bg-rainbow-flow"
         aria-hidden="true"
       >
         {/* Ambient glows inside */}
@@ -96,16 +90,16 @@ export function Contact() {
 
       <div className={`max-w-4xl mx-auto relative z-10 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-            <div className="w-2 h-2 rounded-full bg-yellow-300 animate-pulse" />
-            <span className="text-white/90 text-base tracking-wide font-sans">Get Started</span>
+          <div className="inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+            <div className="w-2 h-2 rounded-full bg-fuchsia-500 animate-pulse" />
+            <span className="text-fuchsia-700 text-base tracking-wide font-sans">Get Started</span>
           </div>
           
-          <h2 id="contact-heading" className="font-serif text-4xl md:text-6xl text-white mb-6 drop-shadow-lg">
+          <h2 id="contact-heading" className="font-display text-3xl sm:text-4xl md:text-6xl text-[#0b0620] mb-6">
             Let&apos;s Connect
           </h2>
-          <p className="text-white/90 leading-relaxed text-lg md:text-xl max-w-xl mx-auto drop-shadow">
-            Schedule a consultation, book a session, or ask about bringing chair yoga to your community.
+          <p className="text-[#0b0620]/75 leading-relaxed text-base sm:text-lg md:text-xl max-w-xl mx-auto px-1">
+            Schedule a consultation, book a session, or ask about hypnosis, meditation, or a sound bath.
           </p>
           
           {/* Two Calendly Options */}
@@ -115,7 +109,7 @@ export function Contact() {
               href={consultationUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 bg-white text-purple-700 hover:bg-purple-50 font-sans px-6 py-4 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all text-base font-semibold"
+              className="inline-flex items-center justify-center gap-3 bg-white text-fuchsia-700 hover:bg-fuchsia-50 font-sans px-6 py-4 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all text-base font-semibold w-full sm:w-auto min-h-12"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -128,7 +122,7 @@ export function Contact() {
               href={bookSessionUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 bg-purple-600 text-white hover:bg-purple-700 font-sans px-6 py-4 rounded-full shadow-lg shadow-purple-600/30 hover:shadow-xl hover:scale-105 transition-all text-base font-semibold"
+              className="inline-flex items-center justify-center gap-3 bg-fuchsia-600 text-white hover:bg-fuchsia-700 font-sans px-6 py-4 rounded-full shadow-lg shadow-fuchsia-600/30 hover:shadow-xl hover:scale-105 transition-all text-base font-semibold w-full sm:w-auto min-h-12"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -140,16 +134,16 @@ export function Contact() {
 
         {/* Divider */}
         <div className="flex items-center gap-4 max-w-2xl mx-auto my-10">
-          <div className="flex-1 h-px bg-white/30" />
-          <span className="text-white/70 text-sm font-sans">or send a message</span>
-          <div className="flex-1 h-px bg-white/30" />
+          <div className="flex-1 h-px bg-[#0b0620]/20" />
+          <span className="text-[#0b0620]/60 text-sm font-sans">or send a message</span>
+          <div className="flex-1 h-px bg-[#0b0620]/20" />
         </div>
 
-        <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-2xl max-w-2xl mx-auto">
+        <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-5 sm:p-8 md:p-10 shadow-2xl max-w-2xl mx-auto">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-amber-900 text-base font-medium mb-2">
+                <label htmlFor="name" className="block text-[#0b0620] text-base font-medium mb-2">
                   Your Name
                 </label>
                 <Input
@@ -160,11 +154,11 @@ export function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full bg-amber-50/50 text-amber-950 placeholder:text-amber-400 border border-amber-200 focus-visible:ring-2 focus-visible:ring-purple-400 py-5 px-4 rounded-xl text-base"
+                  className="w-full bg-fuchsia-50/50 text-[#0b0620] placeholder:text-violet-400 border border-fuchsia-200 focus-visible:ring-2 focus-visible:ring-fuchsia-400 py-5 px-4 rounded-xl text-base"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-amber-900 text-base font-medium mb-2">
+                <label htmlFor="email" className="block text-[#0b0620] text-base font-medium mb-2">
                   Email Address
                 </label>
                 <Input
@@ -175,13 +169,13 @@ export function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full bg-amber-50/50 text-amber-950 placeholder:text-amber-400 border border-amber-200 focus-visible:ring-2 focus-visible:ring-purple-400 py-5 px-4 rounded-xl text-base"
+                  className="w-full bg-fuchsia-50/50 text-[#0b0620] placeholder:text-violet-400 border border-fuchsia-200 focus-visible:ring-2 focus-visible:ring-fuchsia-400 py-5 px-4 rounded-xl text-base"
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor="service" className="block text-amber-900 text-base font-medium mb-2">
+              <label htmlFor="service" className="block text-[#0b0620] text-base font-medium mb-2">
                 Service Interest
               </label>
               <select
@@ -189,13 +183,11 @@ export function Contact() {
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
-                className="w-full bg-amber-50/50 text-amber-950 border border-amber-200 focus-visible:ring-2 focus-visible:ring-purple-400 py-3 px-4 rounded-xl text-base appearance-none cursor-pointer"
+                className="w-full min-h-12 bg-fuchsia-50/50 text-[#0b0620] border border-fuchsia-200 focus-visible:ring-2 focus-visible:ring-fuchsia-400 py-3 px-4 rounded-xl text-base appearance-none cursor-pointer"
               >
                 <option value="">Select a service...</option>
                 
                 <optgroup label="Single Sessions">
-                  <option value="chair-yoga">Chair Yoga — Private or Small Group (45 or 60 min, rates negotiable)</option>
-                  <option value="gentle-dance">Gentle Dance & Movement</option>
                   <option value="hypnosis">Hypnosis - Mind Reset ($70)</option>
                   <option value="guided-meditation">Group Guided Meditations (rates negotiable)</option>
                   <option value="sound-bath">Sound Bath - Vibrational Reset ($50)</option>
@@ -208,16 +200,12 @@ export function Contact() {
                   <option value="confidence">Confidence & Self-Esteem ($175)</option>
                 </optgroup>
                 
-                <optgroup label="Facility Booking">
-                  <option value="facility-booking">Chair Yoga for Senior Living Communities (45 or 60 min, rates negotiable)</option>
-                </optgroup>
-                
                 <option value="other">Other / Not Sure</option>
               </select>
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-amber-900 text-base font-medium mb-2">
+              <label htmlFor="message" className="block text-[#0b0620] text-base font-medium mb-2">
                 Your Message
               </label>
               <Textarea
@@ -228,13 +216,13 @@ export function Contact() {
                 onChange={handleChange}
                 required
                 rows={4}
-                className="w-full bg-amber-50/50 text-amber-950 placeholder:text-amber-400 border border-amber-200 focus-visible:ring-2 focus-visible:ring-purple-400 px-4 py-3 rounded-xl text-base resize-none"
+                className="w-full bg-fuchsia-50/50 text-[#0b0620] placeholder:text-violet-400 border border-fuchsia-200 focus-visible:ring-2 focus-visible:ring-fuchsia-400 px-4 py-3 rounded-xl text-base resize-none"
               />
             </div>
 
             <Button 
               type="submit" 
-              className="w-full bg-purple-600 text-white hover:bg-purple-700 font-sans py-6 rounded-xl shadow-lg shadow-purple-600/25 hover:shadow-xl hover:scale-[1.02] transition-all text-base font-medium"
+              className="w-full bg-fuchsia-600 text-white hover:bg-fuchsia-700 font-sans py-6 rounded-xl shadow-lg shadow-fuchsia-600/25 hover:shadow-xl hover:scale-[1.02] transition-all text-base font-medium"
             >
               Send Message
             </Button>
@@ -267,13 +255,12 @@ export function Contact() {
           )}
         </div>
 
-        <div className="mt-8 text-center space-y-3">
-          <p className="inline-block bg-white rounded-full px-6 py-3 text-purple-700 text-base font-sans shadow-lg">
+        <div className="mt-8 text-center space-y-3 px-1">
+          <p className="block bg-white rounded-2xl sm:rounded-full px-4 sm:px-6 py-3 text-fuchsia-700 text-sm sm:text-base font-sans shadow-lg leading-relaxed">
             <strong>Based in Sanford, FL</strong> — Serving Sanford, DeLand, Daytona Beach, Orlando &amp; Central Florida, plus virtual sessions worldwide
           </p>
-          <br />
-          <p className="inline-block bg-white rounded-full px-6 py-3 text-purple-700 text-base font-sans shadow-lg">
-            <strong>Prefer to reach out directly?</strong> Call <a href="tel:+16159731158" className="font-bold underline hover:text-purple-900 transition-colors">615-973-1158</a> or email <a href="mailto:openroadwellnessco@gmail.com" className="font-bold underline hover:text-purple-900 transition-colors">openroadwellnessco@gmail.com</a>
+          <p className="block bg-white rounded-2xl sm:rounded-full px-4 sm:px-6 py-3 text-fuchsia-700 text-sm sm:text-base font-sans shadow-lg leading-relaxed break-words">
+            <strong>Prefer to reach out directly?</strong> Call <a href={`tel:${SITE_PHONE_E164}`} className="font-bold underline hover:text-fuchsia-900 transition-colors">{SITE_PHONE}</a> or email <a href={`mailto:${SITE_EMAIL}`} className="font-bold underline hover:text-fuchsia-900 transition-colors break-all">{SITE_EMAIL}</a>
           </p>
         </div>
       </div>

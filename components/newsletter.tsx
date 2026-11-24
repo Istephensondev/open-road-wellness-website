@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 export function Newsletter() {
   const [email, setEmail] = useState("")
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle")
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
   const sectionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
@@ -56,16 +56,11 @@ export function Newsletter() {
     <section 
       id="newsletter" 
       ref={sectionRef}
-      className="py-24 px-4 bg-white relative overflow-hidden" 
+      className="py-14 sm:py-24 px-4 bg-white relative overflow-hidden" 
       aria-labelledby="newsletter-heading"
     >
-      {/* Animated gradient background box */}
-      <div 
-        className="absolute top-8 bottom-8 left-8 right-8 md:top-12 md:bottom-12 md:left-12 md:right-12 lg:top-16 lg:bottom-16 lg:left-16 lg:right-16 shadow-2xl animate-gradient-box"
-        style={{
-          background: 'linear-gradient(-45deg, #fde047, #fb923c, #f97316, #a855f7, #7c3aed, #f97316, #fde047)',
-          backgroundSize: '400% 400%',
-        }}
+      <div
+        className="absolute inset-3 sm:inset-8 md:inset-12 lg:inset-16 rounded-[2rem] shadow-2xl bg-rainbow-flow"
         aria-hidden="true"
       >
         {/* Ambient glows inside */}
@@ -76,16 +71,16 @@ export function Newsletter() {
       </div>
 
       <div className={`max-w-3xl mx-auto text-center relative z-10 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-          <div className="w-2 h-2 rounded-full bg-yellow-300 animate-pulse" />
-          <span className="text-white/90 text-sm tracking-wide font-sans">Stay Connected</span>
+        <div className="inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+          <div className="w-2 h-2 rounded-full bg-fuchsia-500 animate-pulse" />
+          <span className="text-fuchsia-700 text-sm tracking-wide font-sans">Stay Connected</span>
         </div>
         
-        <h2 id="newsletter-heading" className="font-serif text-4xl md:text-6xl text-white mb-6 drop-shadow-lg">
+        <h2 id="newsletter-heading" className="font-display text-3xl sm:text-4xl md:text-6xl text-[#0b0620] mb-6 text-balance">
           Join Our Newsletter
         </h2>
-        <p className="text-white/90 mb-10 leading-relaxed text-lg max-w-xl mx-auto drop-shadow">
-          Receive monthly insights on wellness, mindfulness practices, and exclusive offers delivered to your inbox.
+        <p className="text-[#0b0620]/75 mb-8 sm:mb-10 leading-relaxed text-base sm:text-lg max-w-xl mx-auto px-1">
+          Receive monthly insights on hypnosis, meditation, sound healing, and exclusive offers from 5D Unleashed.
         </p>
 
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
@@ -100,13 +95,13 @@ export function Newsletter() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full bg-white/95 text-amber-950 placeholder:text-amber-400 border-0 focus-visible:ring-2 focus-visible:ring-purple-400 py-6 px-6 rounded-full shadow-lg text-base"
+              className="w-full bg-white/95 text-[#0b0620] placeholder:text-violet-400 border-0 focus-visible:ring-2 focus-visible:ring-fuchsia-400 py-6 px-6 rounded-full shadow-lg text-base"
               aria-describedby={status !== "idle" ? "newsletter-status" : undefined}
             />
           </div>
           <Button 
             type="submit" 
-            className="bg-purple-600 text-white hover:bg-purple-700 font-sans px-8 py-6 rounded-full shadow-lg shadow-purple-600/25 hover:shadow-xl hover:scale-105 transition-all text-base"
+            className="bg-fuchsia-600 text-white hover:bg-fuchsia-700 font-sans px-8 py-6 rounded-full shadow-lg shadow-fuchsia-600/25 hover:shadow-xl hover:scale-105 transition-all text-base"
           >
             Subscribe
           </Button>
@@ -115,14 +110,14 @@ export function Newsletter() {
         {status === "success" && (
           <div 
             id="newsletter-status" 
-            className="mt-6 inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 animate-scale-in" 
+            className="mt-6 inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 animate-scale-in" 
             role="status" 
             aria-live="polite"
           >
-            <svg className="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-fuchsia-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
-            <span className="text-white font-sans">Thank you for subscribing!</span>
+            <span className="text-[#0b0620] font-sans">Thank you for subscribing!</span>
           </div>
         )}
 
@@ -136,11 +131,11 @@ export function Newsletter() {
             <svg className="w-5 h-5 text-red-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
-            <span className="text-white font-sans">Something went wrong. Please try again.</span>
+            <span className="text-[#0b0620] font-sans">Something went wrong. Please try again.</span>
           </div>
         )}
         
-        <p className="text-white/60 text-sm mt-6 font-sans">
+        <p className="text-[#0b0620]/55 text-sm mt-6 font-sans">
           We respect your privacy. Unsubscribe at any time.
         </p>
       </div>

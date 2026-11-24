@@ -4,25 +4,25 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(0.97 0.005 75);
-  --foreground: oklch(0.25 0.02 60);
-  --card: oklch(0.99 0.003 75);
-  --card-foreground: oklch(0.25 0.02 60);
-  --popover: oklch(0.99 0.003 75);
-  --popover-foreground: oklch(0.25 0.02 60);
-  --primary: oklch(0.35 0.06 145);
-  --primary-foreground: oklch(0.98 0.005 75);
-  --secondary: oklch(0.92 0.015 75);
-  --secondary-foreground: oklch(0.30 0.03 60);
-  --muted: oklch(0.93 0.01 75);
-  --muted-foreground: oklch(0.50 0.02 60);
-  --accent: oklch(0.75 0.12 55);
-  --accent-foreground: oklch(0.20 0.02 60);
+  --background: oklch(0.985 0.01 300);
+  --foreground: oklch(0.18 0.06 290);
+  --card: oklch(0.995 0.005 300);
+  --card-foreground: oklch(0.18 0.06 290);
+  --popover: oklch(0.995 0.005 300);
+  --popover-foreground: oklch(0.18 0.06 290);
+  --primary: oklch(0.48 0.22 300);
+  --primary-foreground: oklch(0.99 0.01 100);
+  --secondary: oklch(0.94 0.03 300);
+  --secondary-foreground: oklch(0.22 0.08 290);
+  --muted: oklch(0.94 0.02 300);
+  --muted-foreground: oklch(0.48 0.04 290);
+  --accent: oklch(0.86 0.18 95);
+  --accent-foreground: oklch(0.18 0.06 290);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.88 0.02 75);
-  --input: oklch(0.95 0.01 75);
-  --ring: oklch(0.45 0.08 145);
+  --border: oklch(0.88 0.04 300);
+  --input: oklch(0.95 0.02 300);
+  --ring: oklch(0.62 0.22 320);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -76,7 +76,8 @@
 
 @theme inline {
   --font-sans: var(--font-sans), 'Inter', system-ui, sans-serif;
-  --font-serif: var(--font-serif), 'Cormorant Garamond', Georgia, serif;
+  --font-display: var(--font-display), 'Fredoka', system-ui, sans-serif;
+  --font-serif: var(--font-display), 'Fredoka', system-ui, sans-serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -120,8 +121,24 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
   body {
     @apply bg-background text-foreground;
+    -webkit-tap-highlight-color: transparent;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  button,
+  a {
+    touch-action: manipulation;
+  }
+  section[id] {
+    scroll-margin-top: 5.5rem;
   }
 }
 
@@ -249,6 +266,52 @@
 }
 
 .animate-gradient-box {
-  background-size: 200% 200%;
-  animation: gradient-shift 8s ease infinite, morph 12s ease-in-out infinite;
+  border-radius: 2rem;
+}
+
+.bg-sunburst {
+  background-color: #fff4dc;
+  background-image:
+    radial-gradient(circle at 50% -8%, #ffe566 0%, #ffd36a 16%, #ffc2a8 32%, #ffc1dc 48%, #e9d5ff 68%, #fff8eb 100%),
+    repeating-conic-gradient(
+      from 0deg at 50% -6%,
+      transparent 0deg 22deg,
+      rgba(250, 204, 21, 0.18) 22deg 23deg
+    );
+}
+
+.bg-rainbow-flow {
+  background: linear-gradient(165deg, #ffe566 0%, #ffc2a8 38%, #f9a8d4 68%, #d8b4fe 100%);
+}
+
+.brand-pill {
+  background: #0b0620;
+  border: 3px solid #facc15;
+}
+
+.brand-wordmark {
+  color: #fde047;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-shadow:
+    -2px -2px 0 #f472b6,
+    2px -2px 0 #f472b6,
+    -2px 2px 0 #f472b6,
+    2px 2px 0 #f472b6,
+    0 0 18px rgba(244, 114, 182, 0.45);
+}
+
+@media (max-width: 640px) {
+  .brand-wordmark {
+    text-shadow:
+      -1px -1px 0 #f472b6,
+      1px -1px 0 #f472b6,
+      -1px 1px 0 #f472b6,
+      1px 1px 0 #f472b6;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display), 'Fredoka', ui-rounded, system-ui, sans-serif;
 }

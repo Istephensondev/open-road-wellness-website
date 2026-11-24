@@ -1,65 +1,66 @@
+import { LOGO_SRC, SITE_EMAIL, SITE_LEGAL_NAME, SITE_NAME, SITE_PHONE, SITE_PHONE_E164, SITE_TAGLINE, SOCIAL } from "@/lib/site"
+
 export function Footer() {
   const currentYear = new Date().getFullYear()
-  
+
   return (
-    <footer className="py-12 px-4 bg-foreground text-background">
+    <footer className="pt-10 sm:pt-12 px-4 bg-[#0b0620] text-white pb-[calc(6.5rem+env(safe-area-inset-bottom))] md:pb-12">
       <div className="max-w-5xl mx-auto">
-        <div className="grid sm:grid-cols-4 gap-8 mb-8">
-          {/* Brand */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="font-serif text-2xl mb-4">Open Road Wellness</h3>
-            <p className="text-background/70 text-sm leading-relaxed">
-              Bringing accessible movement, healing, and wellness to Central Florida — one session at a time.
+            <div className="flex items-center gap-3 mb-4">
+              <img src={LOGO_SRC} alt="" className="h-12 w-12 rounded-full ring-2 ring-yellow-300" />
+              <h3 className="font-display brand-wordmark text-xl sm:text-2xl leading-none">{SITE_NAME}</h3>
+            </div>
+            <p className="text-white/70 text-sm leading-relaxed">
+              ✦ {SITE_TAGLINE} ✦
+            </p>
+            <p className="text-white/70 text-sm leading-relaxed mt-2">
+              Hypnosis, guided meditation, and sound baths for awakening your higher self.
             </p>
           </div>
 
-          {/* Services */}
           <div>
-            <h4 className="font-sans text-sm uppercase tracking-wider mb-4 text-background/80">
+            <h4 className="font-sans text-sm uppercase tracking-wider mb-4 text-yellow-300/90">
               Services
             </h4>
-            <ul className="text-sm text-background/70 space-y-2">
-              <li><a href="/chair-yoga" className="hover:text-background transition-colors">Chair Yoga</a></li>
-              <li><a href="/gentle-movement" className="hover:text-background transition-colors">Gentle Movement</a></li>
-              <li><a href="/hypnosis" className="hover:text-background transition-colors">Hypnosis</a></li>
-              <li><a href="/group-guided-meditation" className="hover:text-background transition-colors">Group Guided Meditations</a></li>
-              <li><a href="/sound-bath" className="hover:text-background transition-colors">Sound Baths</a></li>
-              <li><a href="/senior-living-wellness" className="hover:text-background transition-colors">Senior Living Communities</a></li>
+            <ul className="text-sm text-white/70 space-y-2">
+              <li><a href="/hypnosis" className="hover:text-yellow-300 transition-colors">Hypnosis</a></li>
+              <li><a href="/group-guided-meditation" className="hover:text-yellow-300 transition-colors">Group Guided Meditations</a></li>
+              <li><a href="/sound-bath" className="hover:text-yellow-300 transition-colors">Sound Baths</a></li>
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
-            <h4 className="font-sans text-sm uppercase tracking-wider mb-4 text-background/80">
+            <h4 className="font-sans text-sm uppercase tracking-wider mb-4 text-yellow-300/90">
               Contact
             </h4>
-            <address className="not-italic text-sm text-background/70 space-y-2">
+            <address className="not-italic text-sm text-white/70 space-y-2">
               <p>
-                <a href="mailto:openroadwellnessco@gmail.com" className="hover:text-background transition-colors">
-                  openroadwellnessco@gmail.com
+                <a href={`mailto:${SITE_EMAIL}`} className="hover:text-yellow-300 transition-colors break-all">
+                  {SITE_EMAIL}
                 </a>
               </p>
               <p>
-                <a href="tel:+16159731158" className="hover:text-background transition-colors">
-                  615-973-1158
+                <a href={`tel:${SITE_PHONE_E164}`} className="hover:text-yellow-300 transition-colors">
+                  {SITE_PHONE}
                 </a>
               </p>
               <p>Sanford, FL</p>
             </address>
           </div>
 
-          {/* Social */}
           <div>
-            <h4 className="font-sans text-sm uppercase tracking-wider mb-4 text-background/80">
+            <h4 className="font-sans text-sm uppercase tracking-wider mb-4 text-yellow-300/90">
               Follow Along
             </h4>
-            <ul className="flex gap-4" role="list">
+            <ul className="flex gap-3" role="list">
               <li>
-                <a 
-                  href="https://instagram.com/openroadwellness" 
+                <a
+                  href={SOCIAL.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-background/70 hover:text-background transition-colors"
+                  className="inline-flex min-h-11 min-w-11 items-center justify-center text-white/70 hover:text-yellow-300 transition-colors"
                   aria-label="Follow us on Instagram"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -68,11 +69,11 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a 
-                  href="https://tiktok.com/@openroadwellness" 
+                <a
+                  href={SOCIAL.tiktok}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-background/70 hover:text-background transition-colors"
+                  className="inline-flex min-h-11 min-w-11 items-center justify-center text-white/70 hover:text-yellow-300 transition-colors"
                   aria-label="Follow us on TikTok"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -81,11 +82,11 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a 
-                  href="https://facebook.com" 
+                <a
+                  href={SOCIAL.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-background/70 hover:text-background transition-colors"
+                  className="inline-flex min-h-11 min-w-11 items-center justify-center text-white/70 hover:text-yellow-300 transition-colors"
                   aria-label="Connect with us on Facebook"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -94,11 +95,11 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a 
-                  href="https://youtube.com/@openroadwellness" 
+                <a
+                  href={SOCIAL.youtube}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-background/70 hover:text-background transition-colors"
+                  className="inline-flex min-h-11 min-w-11 items-center justify-center text-white/70 hover:text-yellow-300 transition-colors"
                   aria-label="Subscribe on YouTube"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -110,9 +111,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-background/20 pt-8 text-center">
-          <p className="text-background/60 text-sm font-sans">
-            {currentYear} Open Road Wellness LLC. All rights reserved.
+        <div className="border-t border-white/15 pt-8 text-center">
+          <p className="text-white/60 text-sm font-sans">
+            {currentYear} {SITE_NAME}. A DBA of {SITE_LEGAL_NAME}. All rights reserved.
           </p>
         </div>
       </div>

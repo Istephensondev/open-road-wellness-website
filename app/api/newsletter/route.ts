@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server'
 import { escapeHtml, sendTransactionalEmail } from '@/lib/send-email'
+import { SITE_EMAIL, SITE_NAME } from '@/lib/site'
 
-const OWNER_EMAIL = 'openroadwellnessco@gmail.com'
+const OWNER_EMAIL = SITE_EMAIL
 
 export async function POST(request: Request) {
   try {
@@ -24,7 +25,7 @@ export async function POST(request: Request) {
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #7c3aed;">New Newsletter Subscriber</h2>
-          <p>Someone just signed up for the Open Road Wellness newsletter.</p>
+          <p>Someone just signed up for the ${SITE_NAME} newsletter.</p>
           <div style="background: #fef3c7; padding: 20px; border-radius: 10px; margin: 20px 0;">
             <p style="margin: 0; font-size: 18px;"><strong>Subscriber email:</strong> ${safeEmail}</p>
           </div>
@@ -37,12 +38,12 @@ export async function POST(request: Request) {
       if (subscriber.toLowerCase() !== OWNER_EMAIL.toLowerCase()) {
         await sendTransactionalEmail({
           to: subscriber,
-          subject: 'Thanks for subscribing to Open Road Wellness',
+          subject: `Thanks for subscribing to ${SITE_NAME}`,
           html: `
             <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
               <h2 style="color: #7c3aed;">You're on the list</h2>
-              <p>Thank you for subscribing to the Open Road Wellness newsletter.</p>
-              <p>I'll share monthly insights on chair yoga, gentle movement, and holistic wellness for seniors and individuals across Central Florida.</p>
+              <p>Thank you for subscribing to the ${SITE_NAME} newsletter.</p>
+              <p>I'll share monthly insights on hypnosis, meditation, sound healing, and awakening your higher self.</p>
               <p style="color: #666; font-size: 14px; margin-top: 24px;">If you didn't subscribe, you can ignore this email.</p>
             </div>
           `,

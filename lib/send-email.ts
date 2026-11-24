@@ -28,8 +28,9 @@ export async function sendTransactionalEmail({
   const resend = new Resend(apiKey)
   const recipient = to || process.env.CONTACT_EMAIL || "openroadwellnessco@gmail.com"
   const fromAddresses = [
-    "Open Road Wellness <hello@openroadwellness.org>",
-    "Open Road Wellness <onboarding@resend.dev>",
+    "5D Unleashed <hello@5dunleashed.com>",
+    "5D Unleashed <hello@openroadwellness.org>",
+    "5D Unleashed <onboarding@resend.dev>",
   ]
 
   let lastError: Error | null = null

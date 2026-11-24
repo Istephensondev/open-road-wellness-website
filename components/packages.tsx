@@ -6,12 +6,6 @@ import { useEffect, useRef, useState } from "react"
 
 const singleSessions = [
   {
-    name: "Chair Yoga — Private or Small Group",
-    duration: "45 or 60 min",
-    price: "Rates negotiable",
-    description: "Accessible, seated movement to build strength, flexibility, and calm. Classes are offered in 45-minute or one-hour formats, with pricing arranged based on session type and group size.",
-  },
-  {
     name: "Hypnosis - Mind Reset",
     duration: "60 min",
     price: "$70",
@@ -122,20 +116,13 @@ const specialtyPrograms = [
   },
 ]
 
-const facilityRate = {
-  name: "Chair Yoga Class — On-Site at Your Community",
-  price: "Rates negotiable",
-  description: "Available as 45-minute or one-hour classes, tailored to your community's group size, schedule, and location.",
-}
-
 export function Packages() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
   const sectionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
-    // Show immediately on mobile or after a short delay as fallback
     const timer = setTimeout(() => setIsVisible(true), 500)
-    
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -156,54 +143,48 @@ export function Packages() {
   }, [])
 
   return (
-    <section id="packages" ref={sectionRef} className="py-24 px-4 bg-white relative overflow-hidden">
-      {/* Animated gradient background box */}
-      <div 
-        className="absolute top-8 bottom-8 left-8 right-8 md:top-12 md:bottom-12 md:left-12 md:right-12 lg:top-16 lg:bottom-16 lg:left-16 lg:right-16 shadow-2xl animate-gradient-box"
-        style={{
-          background: 'linear-gradient(-45deg, #fde047, #fb923c, #f97316, #a855f7, #7c3aed, #f97316, #fde047)',
-          backgroundSize: '400% 400%',
-        }}
+    <section id="packages" ref={sectionRef} className="py-14 sm:py-24 px-4 bg-white relative overflow-hidden">
+      <div
+        className="absolute inset-3 sm:inset-8 md:inset-12 lg:inset-16 rounded-[2rem] shadow-2xl bg-rainbow-flow"
         aria-hidden="true"
       >
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-10 left-10 w-48 h-48 rounded-full bg-yellow-400/30 blur-3xl animate-float" />
-          <div className="absolute bottom-10 right-10 w-48 h-48 rounded-full bg-purple-400/30 blur-3xl animate-float animation-delay-200" />
+          <div className="absolute bottom-10 right-10 w-48 h-48 rounded-full bg-fuchsia-400/30 blur-3xl animate-float animation-delay-200" />
         </div>
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-amber-800 text-base md:text-lg tracking-[0.3em] uppercase mb-4 font-sans font-medium">
+          <p className="text-fuchsia-700 text-sm sm:text-base md:text-lg tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4 font-sans font-medium">
             Investment in Yourself
           </p>
-          <h2 className="font-serif text-4xl md:text-6xl text-white mb-6 drop-shadow-lg">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-6xl text-[#0b0620] mb-6 text-balance">
             Packages & Pricing
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-yellow-300 to-purple-500 mx-auto rounded-full mb-6" />
-          <p className="text-white/90 max-w-2xl mx-auto leading-relaxed text-lg md:text-xl drop-shadow">
+          <div className="w-24 h-1 bg-gradient-to-r from-yellow-300 to-fuchsia-500 mx-auto rounded-full mb-6" />
+          <p className="text-[#0b0620]/75 max-w-2xl mx-auto leading-relaxed text-lg md:text-xl">
             Choose the experience that resonates with where you are on your journey.
           </p>
         </div>
 
-        {/* Single Sessions */}
         <div className="mb-12">
-          <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Single-Session Packages</h3>
-          <div className="grid md:grid-cols-2 gap-4">
+          <h3 className="font-display text-xl sm:text-2xl md:text-3xl text-[#0b0620] text-center mb-6">Single-Session Packages</h3>
+          <div className="grid md:grid-cols-3 gap-4">
             {singleSessions.map((session, index) => (
               <Card key={session.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-lg transition-all duration-500 hover:shadow-xl hover:-translate-y-1 flex flex-col ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
                 <CardHeader className="pb-2">
-                  <CardTitle className="font-serif text-xl text-amber-950">{session.name}</CardTitle>
+                  <CardTitle className="font-display text-xl text-[#0b0620]">{session.name}</CardTitle>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-2xl font-serif text-purple-600">{session.price}</span>
-                    <span className="text-base text-amber-700">{session.duration}</span>
+                    <span className="text-2xl font-display text-fuchsia-600">{session.price}</span>
+                    <span className="text-base text-violet-700">{session.duration}</span>
                   </div>
                 </CardHeader>
                 <CardContent className="flex-1">
-                  <p className="text-base text-amber-800/80">{session.description}</p>
+                  <p className="text-base text-[#0b0620]/80">{session.description}</p>
                 </CardContent>
                 <CardFooter className="pt-0">
-                  <Button asChild className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full">
+                  <Button asChild className="w-full min-h-12 bg-fuchsia-600 hover:bg-fuchsia-700 text-white rounded-full">
                     <a href="#contact">Book</a>
                   </Button>
                 </CardFooter>
@@ -212,49 +193,48 @@ export function Packages() {
           </div>
         </div>
 
-        {/* Specialty Programs */}
         <div className="mb-12">
-          <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Specialty Programs - Focused Transformation</h3>
-          <p className="text-white/80 text-center mb-8 max-w-2xl mx-auto text-base md:text-lg">Each 3-week program includes 2 hypnosis sessions + 1 follow-up, personalized notes, and ongoing support.</p>
+          <h3 className="font-display text-xl sm:text-2xl md:text-3xl text-[#0b0620] text-center mb-6 text-balance">Specialty Programs - Focused Transformation</h3>
+          <p className="text-[#0b0620]/75 text-center mb-8 max-w-2xl mx-auto text-base md:text-lg">Each 3-week program includes 2 hypnosis sessions + 1 follow-up, personalized notes, and ongoing support.</p>
           <div className="grid md:grid-cols-2 gap-6">
             {specialtyPrograms.map((program, index) => (
               <Card key={program.name} className={`bg-white/95 backdrop-blur-sm border-0 shadow-xl transition-all duration-500 hover:shadow-2xl flex flex-col ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: `${index * 100}ms` }}>
                 <CardHeader className="pb-2">
-                  <CardTitle className="font-serif text-2xl text-amber-950">{program.name}</CardTitle>
+                  <CardTitle className="font-display text-2xl text-[#0b0620]">{program.name}</CardTitle>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-3xl font-serif text-purple-600">{program.price}</span>
-                    <span className="text-base text-amber-700">{program.duration}</span>
+                    <span className="text-3xl font-display text-fuchsia-600">{program.price}</span>
+                    <span className="text-base text-violet-700">{program.duration}</span>
                   </div>
                 </CardHeader>
                 <CardContent className="flex-1">
-                  <div className="grid grid-cols-2 gap-4 mb-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                     <div>
-                      <p className="font-medium text-amber-950 text-base mb-2">Sessions:</p>
+                      <p className="font-medium text-[#0b0620] text-base mb-2">Sessions:</p>
                       <ul className="space-y-1">
                         {program.sessions.map(s => (
-                          <li key={s} className="text-sm text-amber-800/80 flex items-start gap-1">
-                            <span className="text-purple-500">•</span>{s}
+                          <li key={s} className="text-sm text-[#0b0620]/80 flex items-start gap-1">
+                            <span className="text-fuchsia-500">•</span>{s}
                           </li>
                         ))}
                       </ul>
                     </div>
                     <div>
-                      <p className="font-medium text-amber-950 text-base mb-2">Benefits:</p>
+                      <p className="font-medium text-[#0b0620] text-base mb-2">Benefits:</p>
                       <ul className="space-y-1">
                         {program.benefits.map(b => (
-                          <li key={b} className="text-sm text-amber-800/80 flex items-start gap-1">
+                          <li key={b} className="text-sm text-[#0b0620]/80 flex items-start gap-1">
                             <span className="text-green-500">✓</span>{b}
                           </li>
                         ))}
                       </ul>
                     </div>
                   </div>
-                  <p className="text-sm text-center bg-purple-50 p-2 rounded-lg text-purple-700">
+                  <p className="text-sm text-center bg-fuchsia-50 p-2 rounded-lg text-fuchsia-700">
                     <strong>Add-On:</strong> {program.addOn}
                   </p>
                 </CardContent>
                 <CardFooter className="pt-0">
-                  <Button asChild className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full">
+                  <Button asChild className="w-full min-h-12 bg-fuchsia-600 hover:bg-fuchsia-700 text-white rounded-full">
                     <a href="#contact">Book</a>
                   </Button>
                 </CardFooter>
@@ -263,28 +243,10 @@ export function Packages() {
           </div>
         </div>
 
-        {/* Facility & Group Rates */}
-        <div className="mb-12">
-          <h3 className="font-serif text-2xl md:text-3xl text-white text-center mb-6 drop-shadow">Facility &amp; Group Rates</h3>
-          <Card className={`bg-white/95 backdrop-blur-sm border-0 shadow-lg max-w-2xl mx-auto transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <CardHeader className="text-center pb-2">
-              <CardTitle className="font-serif text-2xl text-amber-950">{facilityRate.name}</CardTitle>
-              <span className="text-2xl font-serif text-purple-600">{facilityRate.price}</span>
-            </CardHeader>
-            <CardContent className="text-center">
-              <p className="text-base text-amber-800/80 mb-4">{facilityRate.description}</p>
-              <Button asChild className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-8">
-                <a href="#contact">Request a quote</a>
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* CTA */}
         <div className={`text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <Button 
+          <Button
             asChild
-            className="bg-white text-purple-600 hover:bg-purple-50 px-10 py-6 rounded-full text-lg font-medium shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+            className="bg-fuchsia-600 text-white hover:bg-fuchsia-700 px-10 py-6 rounded-full text-lg font-medium shadow-xl hover:shadow-2xl transition-all hover:scale-105"
           >
             <a href="#contact">Book Your Session</a>
           </Button>

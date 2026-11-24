@@ -1,4 +1,8 @@
-# v0-holistic-health-website
+# 5D Unleashed
+
+Website for **5D Unleashed** (`5dunleashed.com`) — hypnosis, group guided meditations, and sound baths. Tagline: *awaken your higher self*.
+
+This repo previously powered Open Road Wellness. Brand copy and canonical URLs now point at 5D Unleashed. For buying the domain, connecting it in Vercel, and redirecting `openroadwellness.org`, see [DOMAIN.md](DOMAIN.md).
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
 

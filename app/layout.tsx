@@ -1,61 +1,67 @@
-import type { Metadata } from 'next'
-import { Cormorant_Garamond, Inter } from 'next/font/google'
+import type { Metadata, Viewport } from 'next'
+import { Fredoka, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { getLocalBusinessJsonLd } from '@/lib/seo'
-import { SITE_URL } from '@/lib/site'
+import { OG_IMAGE, SITE_NAME, SITE_TAGLINE, SITE_URL } from '@/lib/site'
+import { MobileCta } from '@/components/mobile-cta'
 import './globals.css'
 
-const cormorant = Cormorant_Garamond({ 
+const fredoka = Fredoka({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-serif"
+  variable: "--font-display"
 });
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans"
 });
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: '#0b0620',
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Chair Yoga & Senior Wellness in Sanford, FL | Open Road Wellness',
-    template: '%s | Open Road Wellness',
+    default: `Hypnosis, Meditation & Sound Baths | ${SITE_NAME}`,
+    template: `%s | ${SITE_NAME}`,
   },
-  description: 'Certified chair yoga, gentle movement, hypnosis, group guided meditations, and sound baths in Sanford, FL. Serving DeLand, Daytona Beach, Orlando, and Central Florida senior living communities.',
+  description: `${SITE_NAME} — ${SITE_TAGLINE}. Certified hypnosis, group guided meditations, and sound baths in Sanford, FL and virtually worldwide.`,
   keywords: [
-    'chair yoga Sanford FL',
-    'chair yoga for seniors Central Florida',
-    'senior yoga instructor Sanford',
-    'chair yoga assisted living Orlando',
+    '5D Unleashed',
     'hypnosis Sanford FL',
+    'higher self hypnosis',
     'group guided meditation Sanford',
     'sound bath Central Florida',
-    'gentle movement for seniors',
-    'retirement community yoga instructor Florida',
-    'activity director wellness classes',
+    'hypnosis for anxiety Orlando',
+    'guided meditation Florida',
+    'sound healing Sanford FL',
   ],
   authors: [{ name: 'Ivy', url: SITE_URL }],
-  creator: 'Open Road Wellness LLC',
+  creator: SITE_NAME,
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: SITE_URL,
-    siteName: 'Open Road Wellness',
-    title: 'Chair Yoga & Senior Wellness in Sanford, FL | Open Road Wellness',
-    description: 'Chair yoga, hypnosis, group guided meditations, and sound baths for seniors and individuals across Sanford, DeLand, Daytona Beach, and Orlando.',
+    siteName: SITE_NAME,
+    title: `${SITE_NAME} | ${SITE_TAGLINE}`,
+    description: `Certified hypnosis, group guided meditations, and sound baths to awaken your higher self. Based in Sanford, FL with virtual sessions worldwide.`,
     images: [
       {
-        url: '/images/ivy-headshot.png',
-        alt: 'Ivy, certified yoga instructor and hypnosis practitioner at Open Road Wellness',
+        url: OG_IMAGE,
+        alt: `${SITE_NAME} logo`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Chair Yoga & Senior Wellness in Sanford, FL | Open Road Wellness',
-    description: 'Chair yoga, hypnosis, group guided meditations, and sound baths serving Central Florida senior communities.',
-    images: ['/images/ivy-headshot.png'],
+    title: `${SITE_NAME} | ${SITE_TAGLINE}`,
+    description: `Hypnosis, group guided meditations, and sound baths to awaken your higher self.`,
+    images: [OG_IMAGE],
   },
   robots: {
     index: true,
@@ -97,12 +103,13 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${cormorant.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${fredoka.variable} font-sans antialiased`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
+        <MobileCta />
         <Analytics />
       </body>
     </html>

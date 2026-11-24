@@ -76,7 +76,7 @@ export function About() {
             </h2>
             <div className="space-y-5 text-muted-foreground leading-relaxed mb-10 text-lg">
               <p>
-                I'm a certified hypnosis practitioner, intuitive, and musician, and the owner of Open Road Wellness. I believe that healing is not a destination, but a journey—one that opens new roads, pathways, and beginnings unique to each person who chooses to embark upon it.
+                I'm a certified hypnosis practitioner, intuitive, and musician, and the owner of 5D Unleashed. I believe that healing is not a destination, but a journey—one that awakens the higher self unique to each person who chooses to embark upon it.
               </p>
               <p>
                 I've created a safe, nurturing space where transformation can naturally unfold, whether you join me for a guided sound bath or connect virtually. My goal is to make your experience personal, accessible, and deeply restorative.

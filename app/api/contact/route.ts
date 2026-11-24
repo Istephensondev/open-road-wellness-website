@@ -13,8 +13,6 @@ export async function POST(request: Request) {
     }
 
     const serviceLabels: Record<string, string> = {
-      'chair-yoga': 'Chair Yoga — Private or Small Group',
-      'gentle-dance': 'Gentle Dance & Movement',
       'hypnosis': 'Hypnosis',
       'guided-meditation': 'Group Guided Meditations',
       'sound-bath': 'Sound Bath',
@@ -22,7 +20,6 @@ export async function POST(request: Request) {
       'weight-loss': 'Weight Loss & Healthy Habits',
       'anxiety-relief': 'Anxiety & Stress Relief',
       'confidence': 'Confidence & Self-Esteem',
-      'facility-booking': 'Chair Yoga for Senior Living Communities',
       'other': 'Other / Not Sure'
     }
 
