@@ -75,7 +75,7 @@ export default async function SeoServicePage({
             </p>
           ))}
           <p className="text-[#0b0620]/75 text-lg leading-relaxed mb-10">
-            Based in Sanford, FL — serving Sanford, DeLand, Daytona Beach, Orlando, and Central Florida, plus virtual sessions worldwide.
+            Based in Nashville, TN — serving Nashville and Middle Tennessee, plus virtual sessions worldwide.
           </p>
           <a
             href="/#contact"

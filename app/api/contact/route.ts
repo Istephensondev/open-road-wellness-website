@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { escapeHtml, sendTransactionalEmail } from '@/lib/send-email'
+import { SITE_EMAIL } from '@/lib/site'
 
 export async function POST(request: Request) {
   try {
@@ -29,6 +30,7 @@ export async function POST(request: Request) {
     const safeMessage = escapeHtml(String(message))
 
     await sendTransactionalEmail({
+      to: process.env.CONTACT_EMAIL || SITE_EMAIL,
       replyTo: String(email),
       subject: `New Contact: ${name} - ${serviceLabels[service] || 'General Inquiry'}`,
       html: `

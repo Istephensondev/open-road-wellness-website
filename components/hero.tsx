@@ -64,7 +64,7 @@ export function Hero() {
 
           <div className="mt-5 sm:mt-8 bg-white/85 backdrop-blur-md border border-yellow-300/70 rounded-3xl p-4 sm:p-6 md:p-8 text-center shadow-xl">
             <p className="text-[#0b0620]/85 text-base sm:text-lg md:text-xl mb-5 sm:mb-6 max-w-2xl mx-auto leading-relaxed">
-              Hypnosis, meditation, and sound to help you awaken your higher self — in Sanford, FL and virtually worldwide.
+              Hypnosis, meditation, and sound to help you awaken your higher self — in Nashville, TN and virtually worldwide.
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 mb-5 sm:mb-6">
               <a

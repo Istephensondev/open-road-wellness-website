@@ -30,16 +30,16 @@ export const metadata: Metadata = {
     default: `Hypnosis, Meditation & Sound Baths | ${SITE_NAME}`,
     template: `%s | ${SITE_NAME}`,
   },
-  description: `${SITE_NAME} — ${SITE_TAGLINE}. Certified hypnosis, group guided meditations, and sound baths in Sanford, FL and virtually worldwide.`,
+  description: `${SITE_NAME} — ${SITE_TAGLINE}. Certified hypnosis, group guided meditations, and sound baths in Nashville, TN and virtually worldwide.`,
   keywords: [
     '5D Unleashed',
-    'hypnosis Sanford FL',
+    'hypnosis Nashville TN',
     'higher self hypnosis',
-    'group guided meditation Sanford',
-    'sound bath Central Florida',
-    'hypnosis for anxiety Orlando',
-    'guided meditation Florida',
-    'sound healing Sanford FL',
+    'group guided meditation Nashville',
+    'sound bath Nashville',
+    'hypnosis for anxiety Nashville',
+    'guided meditation Tennessee',
+    'sound healing Nashville TN',
   ],
   authors: [{ name: 'Ivy', url: SITE_URL }],
   creator: SITE_NAME,
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: SITE_NAME,
     title: `${SITE_NAME} | ${SITE_TAGLINE}`,
-    description: `Certified hypnosis, group guided meditations, and sound baths to awaken your higher self. Based in Sanford, FL with virtual sessions worldwide.`,
+    description: `Certified hypnosis, group guided meditations, and sound baths to awaken your higher self. Based in Nashville, TN with virtual sessions worldwide.`,
     images: [
       {
         url: OG_IMAGE,
@@ -89,8 +89,8 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png',
   },
   other: {
-    'geo.region': 'US-FL',
-    'geo.placename': 'Sanford',
+    'geo.region': 'US-TN',
+    'geo.placename': 'Nashville',
   },
 }
 

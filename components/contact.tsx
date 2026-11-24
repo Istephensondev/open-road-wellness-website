@@ -257,7 +257,7 @@ export function Contact() {
 
         <div className="mt-8 text-center space-y-3 px-1">
           <p className="block bg-white rounded-2xl sm:rounded-full px-4 sm:px-6 py-3 text-fuchsia-700 text-sm sm:text-base font-sans shadow-lg leading-relaxed">
-            <strong>Based in Sanford, FL</strong> — Serving Sanford, DeLand, Daytona Beach, Orlando &amp; Central Florida, plus virtual sessions worldwide
+            <strong>Based in Nashville, TN</strong> — Serving Nashville and Middle Tennessee, plus virtual sessions worldwide
           </p>
           <p className="block bg-white rounded-2xl sm:rounded-full px-4 sm:px-6 py-3 text-fuchsia-700 text-sm sm:text-base font-sans shadow-lg leading-relaxed break-words">
             <strong>Prefer to reach out directly?</strong> Call <a href={`tel:${SITE_PHONE_E164}`} className="font-bold underline hover:text-fuchsia-900 transition-colors">{SITE_PHONE}</a> or email <a href={`mailto:${SITE_EMAIL}`} className="font-bold underline hover:text-fuchsia-900 transition-colors break-all">{SITE_EMAIL}</a>

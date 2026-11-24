@@ -4,9 +4,10 @@ export const SITE_URL =
 export const SITE_NAME = "5D Unleashed"
 export const SITE_TAGLINE = "awaken your higher self"
 export const SITE_LEGAL_NAME = "Open Road Wellness LLC"
-export const SITE_EMAIL = "openroadwellnessco@gmail.com"
+export const SITE_EMAIL = "hello@5dunleashed.com"
 export const SITE_PHONE = "615-973-1158"
 export const SITE_PHONE_E164 = "+16159731158"
+export const SITE_LOCATION = "Nashville, TN"
 
 export const LOGO_SRC = "/images/logo.png"
 export const OG_IMAGE = "/images/og.png"
@@ -19,9 +20,6 @@ export const SOCIAL = {
 }
 
 export const AREAS_SERVED = [
-  "Sanford, FL",
-  "DeLand, FL",
-  "Daytona Beach, FL",
-  "Orlando, FL",
-  "Central Florida",
+  "Nashville, TN",
+  "Middle Tennessee",
 ]

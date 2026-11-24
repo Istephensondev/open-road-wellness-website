@@ -105,7 +105,7 @@ export function AboutServices() {
                   I&apos;m a certified hypnosis practitioner, and the owner of {SITE_NAME}. I created this work for people who are ready to remember who they are — to quiet the noise, release what no longer belongs, and awaken the higher self that has been waiting underneath.
                 </p>
                 <p>
-                  Sessions are available in Sanford, FL and virtually worldwide. Whether you come for a private hypnosis session, a group meditation, or a sound bath, my goal is the same: to make the experience personal, safe, and genuinely transformative.
+                  Sessions are available in Nashville, TN and virtually worldwide. Whether you come for a private hypnosis session, a group meditation, or a sound bath, my goal is the same: to make the experience personal, safe, and genuinely transformative.
                 </p>
                 <p className="font-medium text-[#0b0620]">
                   Here&apos;s how we work together:

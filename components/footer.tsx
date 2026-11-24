@@ -46,7 +46,7 @@ export function Footer() {
                   {SITE_PHONE}
                 </a>
               </p>
-              <p>Sanford, FL</p>
+              <p>Nashville, TN</p>
             </address>
           </div>
 

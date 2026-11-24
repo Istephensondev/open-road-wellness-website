@@ -3,58 +3,58 @@ import { SITE_EMAIL, SITE_LEGAL_NAME, SITE_NAME, SITE_PHONE_E164, SITE_URL, AREA
 export const seoPages = [
   {
     slug: "hypnosis",
-    title: "Hypnosis in Sanford, FL",
+    title: "Hypnosis in Nashville, TN",
     description:
-      "Certified hypnosis with 5D Unleashed in Sanford, FL and online. Sessions support stress relief, better sleep, habit change, confidence, and awakening your higher self.",
+      "Certified hypnosis with 5D Unleashed in Nashville, TN and online. Sessions support stress relief, better sleep, habit change, confidence, and awakening your higher self.",
     h1: "Hypnosis to Awaken Your Higher Self",
     intro:
       "As a certified hypnosis practitioner, I guide clients into a deeply relaxed, focused state where the subconscious mind can reframe limiting beliefs, reduce anxiety, and support lasting change.",
     body: [
       "Hypnosis can help reduce stress, anxiety, and chronic pain; improve sleep; support habit change such as smoking or overeating; and increase confidence and motivation. It is also a powerful way to reconnect with the part of you that already knows who you are becoming.",
-      "The Mind Reset session is 60 minutes. Specialty programs are also available for smoke-free transformation, weight loss and healthy habits, anxiety and stress relief, and confidence. Private sessions are offered in Central Florida and virtually worldwide.",
+      "The Mind Reset session is 60 minutes. Specialty programs are also available for smoke-free transformation, weight loss and healthy habits, anxiety and stress relief, and confidence. Private sessions are offered in Nashville and virtually worldwide.",
     ],
     keywords: [
-      "hypnosis Sanford FL",
-      "hypnotherapy Central Florida",
-      "hypnosis for anxiety Orlando",
-      "quit smoking hypnosis Florida",
+      "hypnosis Nashville TN",
+      "hypnotherapy Middle Tennessee",
+      "hypnosis for anxiety Nashville",
+      "quit smoking hypnosis Tennessee",
       "higher self hypnosis",
     ],
   },
   {
     slug: "group-guided-meditation",
-    title: "Group Guided Meditations in Sanford, FL",
+    title: "Group Guided Meditations in Nashville, TN",
     description:
-      "Group guided meditation with 5D Unleashed in Sanford and Central Florida. Calming 45- or 60-minute sessions for private groups. Rates negotiable.",
+      "Group guided meditation with 5D Unleashed in Nashville and Middle Tennessee. Calming 45- or 60-minute sessions for private groups. Rates negotiable.",
     h1: "Group Guided Meditations",
     intro:
       "Group guided meditations offer a gentle way to quiet mental chatter, ease anxiety, and invite the body into a deeper state of calm — the stillness where your higher self can be heard. Sessions are tailored to your group.",
     body: [
       "Classes are offered in 45-minute or one-hour formats. They work well for private groups, gatherings, and anyone looking for a restorative, shared practice.",
-      "Rates are negotiable based on group size, session length, and location throughout Sanford, DeLand, Daytona Beach, Orlando, and Central Florida. Virtual groups are available worldwide.",
+      "Rates are negotiable based on group size, session length, and location throughout Nashville and Middle Tennessee. Virtual groups are available worldwide.",
     ],
     keywords: [
-      "group guided meditation Sanford FL",
-      "guided meditation Central Florida",
-      "meditation class Orlando",
+      "group guided meditation Nashville TN",
+      "guided meditation Middle Tennessee",
+      "meditation class Nashville",
     ],
   },
   {
     slug: "sound-bath",
-    title: "Sound Baths in Sanford, FL",
+    title: "Sound Baths in Nashville, TN",
     description:
-      "Sound bath sessions with 5D Unleashed in Sanford, FL and Central Florida. Healing vibration for deep relaxation, nervous system reset, and energetic release. 30–45 minutes.",
-    h1: "Sound Baths in Sanford & Central Florida",
+      "Sound bath sessions with 5D Unleashed in Nashville, TN and Middle Tennessee. Healing vibration for deep relaxation, nervous system reset, and energetic release. 30–45 minutes.",
+    h1: "Sound Baths in Nashville & Middle Tennessee",
     intro:
       "Sound baths use music and vibration to help the body and mind settle. Sessions can promote relaxation, release tension, and refresh mental clarity so you can reconnect inward.",
     body: [
       "A Vibrational Reset sound bath is 30–45 minutes. Sound work can lower stress responses and support a calm, restorative state, making it a strong fit for private clients and small groups.",
-      "Sound baths are available to individuals in Central Florida and can be added to a hypnosis specialty program as an optional add-on.",
+      "Sound baths are available to individuals in Nashville and can be added to a hypnosis specialty program as an optional add-on.",
     ],
     keywords: [
-      "sound bath Sanford FL",
-      "sound healing Central Florida",
-      "sound bath Orlando",
+      "sound bath Nashville TN",
+      "sound healing Middle Tennessee",
+      "sound bath Nashville",
     ],
   },
 ] as const
@@ -97,11 +97,11 @@ export function getLocalBusinessJsonLd() {
     telephone: SITE_PHONE_E164,
     email: SITE_EMAIL,
     description:
-      "Hypnosis, group guided meditations, and sound baths to awaken your higher self. Based in Sanford, FL with virtual sessions worldwide.",
+      "Hypnosis, group guided meditations, and sound baths to awaken your higher self. Based in Nashville, TN with virtual sessions worldwide.",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Sanford",
-      addressRegion: "FL",
+      addressLocality: "Nashville",
+      addressRegion: "TN",
       addressCountry: "US",
     },
     areaServed: AREAS_SERVED.map((name) => ({

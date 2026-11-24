@@ -19,7 +19,7 @@ export async function POST(request: Request) {
     const safeEmail = escapeHtml(subscriber)
 
     await sendTransactionalEmail({
-      to: process.env.CONTACT_EMAIL || OWNER_EMAIL,
+      to: process.env.NEWSLETTER_EMAIL || process.env.CONTACT_EMAIL || OWNER_EMAIL,
       replyTo: subscriber,
       subject: `New Newsletter Subscriber: ${subscriber}`,
       html: `

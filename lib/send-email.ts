@@ -1,4 +1,5 @@
 import { Resend } from "resend"
+import { SITE_EMAIL, SITE_NAME } from "@/lib/site"
 
 export function escapeHtml(value: string) {
   return value
@@ -26,11 +27,10 @@ export async function sendTransactionalEmail({
   }
 
   const resend = new Resend(apiKey)
-  const recipient = to || process.env.CONTACT_EMAIL || "openroadwellnessco@gmail.com"
+  const recipient = to || process.env.CONTACT_EMAIL || SITE_EMAIL
   const fromAddresses = [
-    "5D Unleashed <hello@5dunleashed.com>",
-    "5D Unleashed <hello@openroadwellness.org>",
-    "5D Unleashed <onboarding@resend.dev>",
+    `${SITE_NAME} <${SITE_EMAIL}>`,
+    `${SITE_NAME} <onboarding@resend.dev>`,
   ]
 
   let lastError: Error | null = null
