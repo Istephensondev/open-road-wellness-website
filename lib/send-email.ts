@@ -27,9 +27,9 @@ export async function sendTransactionalEmail({
   }
 
   const resend = new Resend(apiKey)
-  const recipient = to || process.env.CONTACT_EMAIL || SITE_EMAIL
+  const recipient = to || SITE_EMAIL
   const fromAddresses = [
-    `${SITE_NAME} <${SITE_EMAIL}>`,
+    `${SITE_NAME} <hello@5dunleashed.com>`,
     `${SITE_NAME} <onboarding@resend.dev>`,
   ]
 

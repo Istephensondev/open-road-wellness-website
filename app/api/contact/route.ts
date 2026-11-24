@@ -30,7 +30,7 @@ export async function POST(request: Request) {
     const safeMessage = escapeHtml(String(message))
 
     await sendTransactionalEmail({
-      to: process.env.CONTACT_EMAIL || SITE_EMAIL,
+      to: SITE_EMAIL,
       replyTo: String(email),
       subject: `New Contact: ${name} - ${serviceLabels[service] || 'General Inquiry'}`,
       html: `
